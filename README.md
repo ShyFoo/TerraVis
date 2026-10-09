@@ -12,7 +12,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2610.02959-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.02959)
 [![Daily Paper](https://img.shields.io/badge/Daily_Paper-Hugging_Face-FFD21E?logo=huggingface)](https://huggingface.co/papers/2610.02959)
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-FFD21E?logo=huggingface)](https://huggingface.co/datasets/ShyFoo/TerraVis-Annotations)
-[![Online Evaluator](https://img.shields.io/badge/Online_Evaluator-Try_it-2F7A8C?logo=googlechrome&logoColor=white)](https://shyfoo.github.io/TerraVis-web/)
+[![Online Evaluator](https://img.shields.io/badge/Online_Evaluator-Try_it-2F7A8C?logo=googlechrome&logoColor=white)](https://shyfoo.github.io/TerraVis-web/)<br>
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?logo=opensourceinitiative&logoColor=white)](LICENSE)
 
