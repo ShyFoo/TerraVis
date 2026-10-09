@@ -745,7 +745,7 @@ If you find TerraVis useful in your research, please cite:
 
 ```bibtex
 @article{fu2026terravis,
-  title={{TerraVis}: Towards Evaluation of World-Grounded Visual Consistency in Text-to-Image Generation via {MLLM} Workflows},
+  title={TerraVis: Towards Evaluation of World-Grounded Visual Consistency in Text-to-Image Generation via MLLM Workflows},
   author={Fu, Shuai and Gu, Jing and Zhou, Jian and Duan, Zicheng and Zhou, Gengze and Wu, Qi},
   journal={arXiv preprint arXiv:2610.02959},
   year={2026}
