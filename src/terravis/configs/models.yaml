@@ -1,0 +1,168 @@
+# Model registry; the naming convention is in the README.
+
+judge_defaults:
+  sampling:
+    max_new_tokens: 256
+
+judges:
+  # --- API judges ----------------------------------------------------------
+  - id: gpt-5.5
+    provider: openai
+  - id: gpt-5.6-sol
+    provider: openai
+  - id: gemini-3.8-flash
+    provider: google
+
+  # --- Open-weight judges (id = HuggingFace repo id) -----------------------
+  # sampling  official non-thinking params. Judges decode greedily: only presence_penalty bites, and only on vLLM.
+  - id: google/gemma-4-31B-it
+    sampling: {temperature: 1.0, top_p: 0.95, top_k: 64}
+
+  - id: Qwen/Qwen3.8-27B
+    sampling: {temperature: 0.7, top_p: 0.8, top_k: 20, min_p: 0.0, presence_penalty: 1.5, repetition_penalty: 1.0}
+
+t2i:
+  # --- Local models ----------------------------------------------------------
+  # parallel_mode      data_parallel | model_sharding (batch_size must be 1) | api
+  # loader             diffusers (default) | ideogram | cosmos3 | hidream | path/to/file.py:function
+  # gpus_per_replica   model_sharding only: GPUs one sharded copy needs
+  # dtype              bf16 (default), or "auto" to keep natively-fp8 repos fp8
+  # inference_kwargs   the card's recommended call arguments
+  # Sizes are VRAM after from_pretrained.
+
+  # 8B MMDiT + T5-XXL and two CLIP encoders, 28G. Gated repo (HF token).
+  - id: stabilityai/stable-diffusion-3.5-large
+    parallel_mode: data_parallel
+    num_workers: 2
+    height: 1024
+    width: 1024
+
+  # ADD-distilled 4-step sd3.5-large, 28G. Gated repo (HF token).
+  - id: stabilityai/stable-diffusion-3.5-large-turbo
+    parallel_mode: data_parallel
+    num_workers: 2
+    height: 1024
+    width: 1024
+    inference_kwargs: {num_inference_steps: 4, guidance_scale: 0.0}
+
+  # 32B transformer + 24B text encoder, 113G: 2 cards; one card silently spills to CPU, 1.8x slower.
+  # Gated repo (HF token).
+  - id: black-forest-labs/FLUX.2-dev
+    parallel_mode: model_sharding
+    gpus_per_replica: 2
+    height: 1024
+    width: 1024
+
+  # 4-step guidance-distilled FLUX.2, 9B / 35G. Gated repo (HF token).
+  - id: black-forest-labs/FLUX.2-klein-9B
+    parallel_mode: data_parallel
+    num_workers: 2
+    height: 1024
+    width: 1024
+    inference_kwargs: {num_inference_steps: 4, guidance_scale: 1.0}
+
+  # 20B MMDiT + 7B text encoder, 58G.
+  - id: Qwen/Qwen-Image-2512
+    parallel_mode: data_parallel
+    num_workers: 2
+    height: 1024
+    width: 1024
+
+  # Two 9.3B transformers + an 8B Qwen3-VL text encoder, 26G fp8.
+  # Gated repo (HF token); needs IDEOGRAM_API_KEY (magic-prompt rewrite, unseeded).
+  # Presets V4_DEFAULT_20 / V4_QUALITY_48 / V4_TURBO_12; modes merge over inference_kwargs, so each is written whole.
+  - id: ideogram-ai/ideogram-4-fp8
+    parallel_mode: data_parallel
+    loader: ideogram
+    dtype: auto
+    num_workers: 2
+    height: 1024   # overrides the Ideogram4Pipeline default of 2048
+    width: 1024
+    inference_kwargs:
+      num_inference_steps: 20
+      guidance_schedule: [7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0,
+                          7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 3.0, 3.0]
+      std: 1.75
+    modes:
+      quality:
+        num_inference_steps: 48
+        guidance_schedule: [7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0,
+                            7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0,
+                            7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0,
+                            7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0,
+                            7.0, 7.0, 7.0, 7.0, 7.0, 3.0, 3.0, 3.0]
+        mu: 0.0
+        std: 1.5
+      turbo:
+        num_inference_steps: 12
+        guidance_schedule: [7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0,
+                            7.0, 3.0]
+        mu: 0.5
+        std: 1.75
+
+  # 4-step distilled Cosmos 3 Super, 131G.
+  - id: nvidia/Cosmos3-Super-Text2Image-4Step
+    parallel_mode: model_sharding
+    gpus_per_replica: 2
+    loader: cosmos3
+    height: 1024   # overrides the 720x1280 default; NVIDIA's "768" tier, square
+    width: 1024
+
+  # 8B pixel-level qwen3_vl transformer (no VAE, no text encoder), 17G.
+  - id: HiDream-ai/HiDream-O1-Image
+    parallel_mode: data_parallel
+    loader: hidream
+    num_workers: 2
+    height: 1024   # overrides the 1440x2560 default and the resolution snapping
+    width: 1024
+    inference_kwargs:
+      num_inference_steps: 50
+      guidance_scale: 5.0
+      shift: 3.0
+      scheduler_name: default
+
+  # Distilled release of the above, same loader and 17G bf16.
+  - id: HiDream-ai/HiDream-O1-Image-Dev-2604
+    parallel_mode: data_parallel
+    loader: hidream
+    num_workers: 2
+    height: 1024   # as above
+    width: 1024
+    inference_kwargs:
+      num_inference_steps: 28
+      guidance_scale: 0.0
+      shift: 1.0
+      scheduler_name: flash
+      noise_clip_std: 8.0
+      timesteps_list: [999, 987, 974, 960, 945, 929, 913, 895, 877, 857, 836, 814,
+                       790, 764, 737, 707, 675, 640, 602, 560, 515, 464, 409, 347,
+                       278, 199, 110, 8]
+
+  # --- API models ------------------------------------------------------------
+  - id: gpt-image-1.5
+    provider: openai
+    parallel_mode: api
+    height: 1024   # = the API's square size
+    width: 1024
+
+  - id: gpt-image-2
+    provider: openai
+    parallel_mode: api
+    height: 1024   # = the API's square size
+    width: 1024
+
+  - id: gemini-3-pro-image  # Nano Banana Pro; GA of gemini-3-pro-image-preview (shut down 2026-06-25)
+    provider: google
+    parallel_mode: api
+    use_batch_api: true
+    batch_size: 20
+    height: 1024   # = aspect_ratio "1:1" at the "1K" tier
+    width: 1024
+
+  - id: gemini-3.1-flash-image  # Nano Banana 2
+    provider: google
+    parallel_mode: api
+    use_batch_api: true
+    batch_size: 20
+    height: 1024   # = aspect_ratio "1:1" at the "1K" tier
+    width: 1024

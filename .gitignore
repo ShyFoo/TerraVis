@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.ipynb
+
+# Environment
+.env
+.venv/
+env/
+venv/
+
+# IDE
+.idea/
+.claude/
+.vscode/
+*.swp
+*.swo
+
+# Linting / formatting caches
+.ruff_cache/
+
+# Logs
+*.log
+logs/
+
+# Data / outputs
+results/
+outputs/
+
+# Model weights / checkpoints
+model_weights/
+*.pth
+*.safetensors
+*.ckpt
+*.bin
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cluster job scripts: site-specific account/partition/PVC/secret names
+scripts/kubectl/
+scripts/slurm/
+submit_dgx_*.sh
+submit_slurm_*.sh
+eval-job*.yaml
+gen-job*.yaml

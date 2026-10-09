@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 846 616" width="846" height="616" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" role="img" aria-label="TerraVis scoring workflow">
+  <title>TerraVis scoring workflow: eligibility, violation detection over 18 types, severity, score</title>
+  <rect x="196" y="12" width="452" height="124" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="1.25"/>
+  <circle cx="228" cy="39" r="12" fill="#2f7a8c"/>
+  <text x="228" y="44" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <rect x="547.2" y="27" width="86.8" height="22" rx="11" fill="#e6f1f4"/>
+  <text x="590.6" y="42.5" font-size="11.5" font-weight="600" fill="#245f6d" text-anchor="middle">VLM judge</text>
+  <text x="250" y="44" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">Eligibility</text>
+  <text x="250" y="70" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">Does it show identifiable macroscopic objects or scenes?</text>
+  <text x="250" y="88" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">Photorealistic and stylized images both qualify.</text>
+  <text x="250" y="108" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="start">Abstract art, logos, charts, UI screenshots, posters,</text>
+  <text x="250" y="124" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="start">multi-panel layouts and microscopic content are N/A.</text>
+  <rect x="16" y="40" width="138" height="68" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.25"/>
+  <text x="85" y="70" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">N/A</text>
+  <text x="85" y="91" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">not scored</text>
+  <line x1="194" y1="74.0" x2="162" y2="74.0" stroke="#8c959f" stroke-width="1.75"/>
+  <path d="M163 69.0 L155 74.0 L163 79.0 Z" fill="#8c959f"/>
+  <text x="676" y="54" font-size="11" font-weight="700" fill="#59636e" text-anchor="start">OUTPUT</text>
+  <text x="676" y="74" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">Eligible or N/A,</text>
+  <text x="676" y="92" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">with a reason</text>
+  <line x1="422.0" y1="136" x2="422.0" y2="169" stroke="#8c959f" stroke-width="1.75"/>
+  <path d="M417.0 168 L422.0 176 L427.0 168 Z" fill="#8c959f"/>
+  <text x="434" y="160.5" font-size="12" font-weight="400" fill="#59636e" text-anchor="start">eligible</text>
+  <rect x="196" y="176" width="452" height="132" rx="12" fill="#eef6f8" stroke="#2f7a8c" stroke-width="2"/>
+  <circle cx="228" cy="203" r="12" fill="#2f7a8c"/>
+  <text x="228" y="208" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <rect x="547.2" y="191" width="86.8" height="22" rx="11" fill="#e6f1f4"/>
+  <text x="590.6" y="206.5" font-size="11.5" font-weight="600" fill="#245f6d" text-anchor="middle">VLM judge</text>
+  <text x="250" y="208" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">Violation detection: 18 probes</text>
+  <rect x="250.0" y="222" width="87.2" height="24" rx="6" fill="#dae8fc"/>
+  <text x="293.6" y="238.5" font-size="12.5" font-weight="600" fill="#1f3b63" text-anchor="middle">Object 7</text>
+  <rect x="345.2" y="222" width="124.2" height="24" rx="6" fill="#d5e8d4"/>
+  <text x="407.3" y="238.5" font-size="12.5" font-weight="600" fill="#21451f" text-anchor="middle">Interaction 8</text>
+  <rect x="477.4" y="222" width="79.8" height="24" rx="6" fill="#ffe6b3"/>
+  <text x="517.3" y="238.5" font-size="12.5" font-weight="600" fill="#5c4100" text-anchor="middle">Scene 3</text>
+  <text x="250" y="270" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">One yes/no question per violation type. A Yes reports</text>
+  <text x="250" y="288" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">only the most salient instance, with visual evidence.</text>
+  <text x="676" y="213" font-size="11" font-weight="700" fill="#59636e" text-anchor="start">OUTPUT</text>
+  <text x="676" y="233" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">Yes or No,</text>
+  <text x="676" y="251" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">affected aspect,</text>
+  <text x="676" y="269" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">visual evidence</text>
+  <line x1="422.0" y1="308" x2="422.0" y2="341" stroke="#8c959f" stroke-width="1.75"/>
+  <path d="M417.0 340 L422.0 348 L427.0 340 Z" fill="#8c959f"/>
+  <text x="434" y="332.5" font-size="12" font-weight="400" fill="#59636e" text-anchor="start">each Yes</text>
+  <rect x="196" y="348" width="452" height="100" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="1.25"/>
+  <circle cx="228" cy="375" r="12" fill="#2f7a8c"/>
+  <text x="228" y="380" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <rect x="547.2" y="363" width="86.8" height="22" rx="11" fill="#e6f1f4"/>
+  <text x="590.6" y="378.5" font-size="11.5" font-weight="600" fill="#245f6d" text-anchor="middle">VLM judge</text>
+  <text x="250" y="380" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">Severity</text>
+  <text x="250" y="406" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start"><tspan font-weight="700">Major:</tspan><tspan> main subject, foreground object or central event</tspan></text>
+  <text x="250" y="426" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start"><tspan font-weight="700">Minor:</tspan><tspan> background or peripheral element</tspan></text>
+  <text x="676" y="378" font-size="11" font-weight="700" fill="#59636e" text-anchor="start">OUTPUT</text>
+  <text x="676" y="398" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">Major or Minor,</text>
+  <text x="676" y="416" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">with a reason</text>
+  <line x1="422.0" y1="448" x2="422.0" y2="481" stroke="#8c959f" stroke-width="1.75"/>
+  <path d="M417.0 480 L422.0 488 L427.0 480 Z" fill="#8c959f"/>
+  <text x="434" y="472.5" font-size="12" font-weight="400" fill="#59636e" text-anchor="start"><tspan>count N</tspan><tspan dy="4" font-size="0.72em">major</tspan><tspan dy="-4">, N</tspan><tspan dy="4" font-size="0.72em">minor</tspan></text>
+  <rect x="196" y="488" width="452" height="116" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="1.25"/>
+  <circle cx="228" cy="515" r="12" fill="#2f7a8c"/>
+  <text x="228" y="520" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <rect x="561.6" y="503" width="72.4" height="22" rx="11" fill="#fbeee8"/>
+  <text x="597.8" y="518.5" font-size="11.5" font-weight="600" fill="#9c4a2a" text-anchor="middle">Formula</text>
+  <text x="250" y="520" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">Score</text>
+  <text x="250" y="548" font-size="14.5" font-weight="600" fill="#1f2328" text-anchor="start"><tspan>S = exp(−λ (N</tspan><tspan dy="4" font-size="0.72em">major</tspan><tspan dy="-4"> + α N</tspan><tspan dy="4" font-size="0.72em">minor</tspan><tspan dy="-4">))</tspan><tspan fill="#59636e" font-weight="400">, λ = 1, α = 0.5</tspan></text>
+  <text x="250" y="572" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="start">No violation scores 1. Each major violation multiplies the</text>
+  <text x="250" y="590" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="start"><tspan>score by e</tspan><tspan dy="-6" font-size="0.72em">−1</tspan><tspan dy="6"> ≈ 0.37, each minor one by e</tspan><tspan dy="-6" font-size="0.72em">−0.5</tspan><tspan dy="6"> ≈ 0.61.</tspan></text>
+  <text x="676" y="535" font-size="11" font-weight="700" fill="#59636e" text-anchor="start">OUTPUT</text>
+  <text x="676" y="555" font-size="13.5" font-weight="400" fill="#1f2328" text-anchor="start">Score in (0, 1]</text>
+</svg>

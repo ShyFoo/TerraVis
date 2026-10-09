@@ -1,0 +1,1002 @@
+[
+  {
+    "image_id": "000",
+    "prompt": "A group of people standing next to bags of luggage.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "001",
+    "prompt": "The old tow truck tries to lift an overturned truck that's on it's side.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "002",
+    "prompt": "A cat on the lid of a toilet looking perturbed.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "003",
+    "prompt": "A train pulls up along some buildings.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "004",
+    "prompt": "A baseball player is swinging and about to run.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "005",
+    "prompt": "Girl trying out a game at a trade show.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "006",
+    "prompt": "a women that is walking down a sidewalk.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "007",
+    "prompt": "A grasshopper in a cage eating a slice of carrot.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "008",
+    "prompt": "A person on a snow board high up in the air.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "009",
+    "prompt": "A road wet from rain, and clouds still on the mountain.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "010",
+    "prompt": "A red fire hydrant sitting in the middle of the grass.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "011",
+    "prompt": "A large plate is adorned with broccoli and a rather small piece of meat.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "012",
+    "prompt": "a girl jumping in the air to catch a frisbee",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "013",
+    "prompt": "Two baby gray elephants standing in front of each other.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "014",
+    "prompt": "female tennis player running to intercept the ball",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "015",
+    "prompt": "A cup filled with umbrellas and canes next to a white wall.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "016",
+    "prompt": "One light brown cow with hay in it's mouth.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "017",
+    "prompt": "A plate of chicken with herbs and steamed broccoli.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "018",
+    "prompt": "A table filled with a cake and paper plates with ice cream and cake.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "019",
+    "prompt": "Two giraffes standing outdoors near a brick building.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "020",
+    "prompt": "A child holding a flowered umbrella and petting a yak.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "021",
+    "prompt": "Dog lying on bedding material in suitcase in large room.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "022",
+    "prompt": "Persons skating in the ice skating rink on the skateboard.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "023",
+    "prompt": "The man is posing with his umbrella up.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "024",
+    "prompt": "TWO LADIES ARE OUT SPENDING THE DAY SKIING",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "025",
+    "prompt": "A kneeling woman takes a photo of a park bench.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "026",
+    "prompt": "A beautiful woman with red hair sitting at a table.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "027",
+    "prompt": "A man riding a water ski kicking up waves.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "028",
+    "prompt": "We are looking up at a street sign with a building in the background.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "029",
+    "prompt": "A dog and cat lying together on an orange couch.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "030",
+    "prompt": "A red fire hydrant is leaking onto a side walk.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "031",
+    "prompt": "A water bird stands on the shore as the tide comes in.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "032",
+    "prompt": "a man is riding a skateboard in the street",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "033",
+    "prompt": "a kitchen with a refrigerator and tiled floors",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "034",
+    "prompt": "A surfer sits on his surfboard in the sand close to the water.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "035",
+    "prompt": "Several people play a game with a Frisbee in a park.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "036",
+    "prompt": "A bacon wrapped hotdog on a bun with onions",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "037",
+    "prompt": "A sandwich is next to a yellow stuffed animal.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "038",
+    "prompt": "A large brown dog walking in front of a woman holding two ski poles.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "039",
+    "prompt": "a man is reaching back with a tennis racket",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "040",
+    "prompt": "A man talking on a phone standing in front of a building.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "041",
+    "prompt": "A large white horse walking along side the road.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "042",
+    "prompt": "An orange tabby cat is curled up fast asleep on the top of a sofa cushion.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "043",
+    "prompt": "A young baseball player in uniform getting ready to bat.,",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "044",
+    "prompt": "A white dish plated with corn, carrots, tomatoes, onions, olives, herbs and oil.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "045",
+    "prompt": "A cat on a toilet seat of some sort.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "046",
+    "prompt": "a group of people picking out bananas from carts",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "047",
+    "prompt": "A toilet sitting in a bathroom next to a sink.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "048",
+    "prompt": "A man working on ski bindings with other ski gear around in a living area",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "049",
+    "prompt": "A baby elephant and an adult elephant in sandy area.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "050",
+    "prompt": "A man snowboard down the side of a snow covered slope.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "051",
+    "prompt": "A large group of people on a couple boats in the water.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "052",
+    "prompt": "A giraffe lying on the ground in a zoo pin.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "053",
+    "prompt": "A kitchen with a stainless steel stove and white cabinets.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "054",
+    "prompt": "A lone elephant is walking through a field",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "055",
+    "prompt": "An airplane parked next to a terminal ready for passengers to board.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "056",
+    "prompt": "A plate with chicken,carrots and mashed potatoes with silverware.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "057",
+    "prompt": "A young boy riding a skateboard and wearing a helmet.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "058",
+    "prompt": "a person sitting on the ground with a laptop",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "059",
+    "prompt": "A black cat sleeping in the sun on a bench",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "060",
+    "prompt": "A MAN WITH A BIRTHDAY CUPCAKE BLOWING OUT CANDLES",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "061",
+    "prompt": "A stack of banana's sitting next to a pear and a pile of apples.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "062",
+    "prompt": "A train traveling through a dark tunnel next to green brush..",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "063",
+    "prompt": "A person is on a living room couch watching TV and there is a stuffed panda bear and a purse on the table.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "064",
+    "prompt": "A very long table full of different kinds of food, which people are lining up to eat",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "065",
+    "prompt": "A train traveling under a bridge next to a bunch of trees.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "066",
+    "prompt": "A baseball player holding a bat walking across a field.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "067",
+    "prompt": "Man playing tennis with tennis racket on court",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "068",
+    "prompt": "A hard to miss street sign set between two traffic lights.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "069",
+    "prompt": "A computer desk topped with a desktop computer and a laptop.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "070",
+    "prompt": "Street art painted on the wall in an asian country.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "071",
+    "prompt": "an image of a child playing on a toy laptop",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "072",
+    "prompt": "A teddy bear is sitting in a high chair.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "073",
+    "prompt": "The giraffe is sitting in the middle of the grass alone",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "074",
+    "prompt": "A herd of cattle grazing on a dry grass covered field.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "075",
+    "prompt": "A large truck driving past a shopping center on a rain covered road.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "076",
+    "prompt": "a kitchen with white counter tops and cabinets.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "077",
+    "prompt": "A traffic light hanging over a street next to cross walks.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "078",
+    "prompt": "A lunch salad in a yellow bowl made out of fruit, vegetables, and meats with chopsticks. ",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "079",
+    "prompt": "A wooden bathroom with a wooden toilet next to a window.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "080",
+    "prompt": "a person in blue skies is skiing down a snowy hill",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "081",
+    "prompt": "A person jumping as they swing at a incoming tennis ball.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "082",
+    "prompt": "A guy with a white shirt and jeans riding a skateboard.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "083",
+    "prompt": "A young girl brushing her teeth with a tooth brush.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "084",
+    "prompt": "A brown and white cat is in a suitcase.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "085",
+    "prompt": "A man sanding next to a cow in a pen.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "086",
+    "prompt": "A plate that has a dessert on it.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "087",
+    "prompt": "A dirt bike rider doing a stunt jump in the air",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "088",
+    "prompt": "A boy playing a WII game at Christmas time.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "089",
+    "prompt": "A bus traveling on a freeway next to other traffic.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "090",
+    "prompt": "The bottom half of a tennis player holding a racket.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "091",
+    "prompt": "A bowl of cooked noodles and broccoli in sauce",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "092",
+    "prompt": "A boy draped in a blanket holds a remote control on a couch",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "093",
+    "prompt": "A guy on a snow board up in the air.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "094",
+    "prompt": "A plate filled with a cut in half sandwich on top of a black table.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "095",
+    "prompt": "Woman holding a banana pointed at the camera.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "096",
+    "prompt": "A blue and yellow fire hydrant next to a yellow cone.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "097",
+    "prompt": "a big boat is going down a small river",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "098",
+    "prompt": "A living room filled with furniture and a TV.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "099",
+    "prompt": "A man standing in a bathroom in front of a mirror.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "100",
+    "prompt": "A plate with a banana and slices of cheese.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "101",
+    "prompt": "Cattle lie in the grass to chew their cud.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "102",
+    "prompt": "mopeds parked in a parking garage with a green floor.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "103",
+    "prompt": "A man pushing a wheelchair on the street.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "104",
+    "prompt": "a hot dog stand in a city with people",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "105",
+    "prompt": "A pair of red and black skis on a white background.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "106",
+    "prompt": "Two girls sitting on a bed eating bananas together.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "107",
+    "prompt": "A couple of gray elephants standing next to each other in a wire cage.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "108",
+    "prompt": "A street sign that reads broadway on a traffic light.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "109",
+    "prompt": "A man riding a skateboard down a hall.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "110",
+    "prompt": "Small white toilet with spare rolls of toilet paper beside it.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "111",
+    "prompt": "A tennis player prepares to react during a match.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "112",
+    "prompt": "A green pasture with lots of animals in the foreground and mountains in the back.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "113",
+    "prompt": "Sugar donuts sitting in a white paper bag.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "114",
+    "prompt": "A very dirty looking rest room with two toilets.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "115",
+    "prompt": "A fork next to an apple, orange and onion.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "116",
+    "prompt": "A group of people outside on snow skis.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "117",
+    "prompt": "A man secures a saddle on a horse that a girl is sitting on.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "118",
+    "prompt": "Two cats sitting on top of a pair of shoes.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "119",
+    "prompt": "a large pizza is in a cardboard box",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "120",
+    "prompt": "A woman is riding a motorcycle down the street.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "121",
+    "prompt": "A mirror that is on a tiled wall.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "122",
+    "prompt": "There are woman playing a video game together.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "123",
+    "prompt": "A crowd of people standing in front of a window.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "124",
+    "prompt": "A dog standing on a bed in a room.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "125",
+    "prompt": "A muffin sitting on a plate with a fork while customers sit in the background.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "126",
+    "prompt": "there is a small glass vase that has purple flowers in it",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "127",
+    "prompt": "Pasta and vegetable salad served in bowl with meat and cheese.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "128",
+    "prompt": "The airplane in the sky is doing tricks while spitting out smoke.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "129",
+    "prompt": "A row of wall mounted sinks in a restroom.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "130",
+    "prompt": "A black dog running in a pen with a horse.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "131",
+    "prompt": "A table with a huge glass vase and fake flowers come out of it.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "132",
+    "prompt": "A horse and bug-gee is riding next to the buildings.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "133",
+    "prompt": "A sheet cake sitting on top of a table with lit candles.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "134",
+    "prompt": "A small teddy bear is on a strange chair.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "135",
+    "prompt": "A brown teddy bear sitting on top of a table in front of a white plate with a piece of pie.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "136",
+    "prompt": "A little girl sitting in the middle of a restaurant and smiling for picture.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "137",
+    "prompt": "A building shines in the clear sky as cars drive underneath.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "138",
+    "prompt": "A plate of noodles and broccoli are shown.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "139",
+    "prompt": "Large elephant rubbing itself up against a large tree.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "140",
+    "prompt": "A man with glasses and a tie clip sits in his car.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "141",
+    "prompt": "A white cat sitting on the floor next to a feeding dish and a mat.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "142",
+    "prompt": "A boy putting something in his mouth and smiling for a picture.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "143",
+    "prompt": "A bicycle is lying on the sidewalk beside a fire hydrant.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "144",
+    "prompt": "A living room consisting of windows, rugs, chairs, and a coffee table.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "145",
+    "prompt": "a group of elephants standing around with some people sitting on their backs",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "146",
+    "prompt": "A person in a white jacket skiing down a slope",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "147",
+    "prompt": "A man holding a baseball bat while standing on a baseball field.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "148",
+    "prompt": "A silver motorcycle parked next to a forest filled with lots of trees.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "149",
+    "prompt": "A refrigerator standing in front of a damaged wall.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "150",
+    "prompt": "A pizza topped with cheese and pepperoni with veggies.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "151",
+    "prompt": "Two horses in a wooded area amongst bushes",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "152",
+    "prompt": "A white and blue bird is perched on a tree branch that is sitting next to a bunch of bushes.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "153",
+    "prompt": "A person skate boarding on the top of a half pipe.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "154",
+    "prompt": "A black kitten lays on her side beside remote controls.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "155",
+    "prompt": "Two people are at a computer desk with a mouse.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "156",
+    "prompt": "Two cows overlooking a mountain range and one is looking in the opposite direction of the other one.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "157",
+    "prompt": "a light a few ceiling fans a bicycle a couch and windows",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "158",
+    "prompt": "A person holding up a chocolate doughnut with a face drawn on it.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "159",
+    "prompt": "a cat laying inside of a bathroom sink",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "160",
+    "prompt": "The people are at tables on an outdoor patio.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "161",
+    "prompt": "a street light is hanging on a pole",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "162",
+    "prompt": "A view of a lake and mountains from a boat.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "163",
+    "prompt": "Two giraffe standing next to each other on a grassy field.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "164",
+    "prompt": "Zebras and rhinos out in the wild on a sunny day",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "165",
+    "prompt": "A couple of giraffes that are standing in the grass.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "166",
+    "prompt": "There are meats and vegetables on a flatbread",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "167",
+    "prompt": "A giraffe stands beneath a tree beside a marina.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "168",
+    "prompt": "A lady sitting at an enormous dining table with lots of food.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "169",
+    "prompt": "A person is seen using a snowboard on the packed snow.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "170",
+    "prompt": "a tennis player attempting to reach a tennis ball",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "171",
+    "prompt": "Dairy cows line up against a barber wire fence to graze the sweeter grass.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "172",
+    "prompt": "A cat sitting up on its hind feet on a park bench",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "173",
+    "prompt": "A small white bird standing on top of a pond of water.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "174",
+    "prompt": "A woman holding a pizza up in the air.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "175",
+    "prompt": "a truck and two double deckered busses near a building",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "176",
+    "prompt": "A large American flag sitting on top of a building.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "177",
+    "prompt": "A yellow and green fire hydrant in Canada.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "178",
+    "prompt": "This is a room full of laptop computers.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "179",
+    "prompt": "A trunk full of backpacks and other bags.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "180",
+    "prompt": "A pile of broccoli is being displayed on a plate.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "181",
+    "prompt": "A herd of elephants walking next to each other.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "182",
+    "prompt": "A cat drinking out of a glass on top of a table.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "183",
+    "prompt": "There is a woman taking out fresh baked bread",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "184",
+    "prompt": "A car with some surfboards in a field.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "185",
+    "prompt": "Top of a fire hydrant covered in pink paint.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "186",
+    "prompt": "The top of the computer desk is very shiny.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "187",
+    "prompt": "That looks like a wall mural in the background of this photo with a lot of sheet.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "188",
+    "prompt": "A man on a bike near people on a bench",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "189",
+    "prompt": "A ferry going from one point to another point.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "190",
+    "prompt": "A cat sitting on top of a red boat next to two dogs.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "191",
+    "prompt": "A soccer player looks up at a soccer ball.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "192",
+    "prompt": "Light breaks through a cloudy day at the pier.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "193",
+    "prompt": "A two layer cake sitting on top of a table.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "194",
+    "prompt": "A parking meter next to a parked car.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "195",
+    "prompt": "The view of a giraffe through some vegetation.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "196",
+    "prompt": "The reflection of a man taking a picture in a mirror",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "197",
+    "prompt": "Three teddy bears laying in bed under the covers.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "198",
+    "prompt": "White leather sofas with ottoman near lamps in orange living room.",
+    "data_source": "COCO-T2I"
+  },
+  {
+    "image_id": "199",
+    "prompt": "A Christmas tree with lights and teddy bear.",
+    "data_source": "COCO-T2I"
+  }
+]

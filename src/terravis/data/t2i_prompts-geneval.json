@@ -1,0 +1,2767 @@
+[
+  {
+    "image_id": "000",
+    "prompt": "a photo of a bench",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "001",
+    "prompt": "a photo of a cow",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "002",
+    "prompt": "a photo of a bicycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "003",
+    "prompt": "a photo of a clock",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "004",
+    "prompt": "a photo of a carrot",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "005",
+    "prompt": "a photo of a suitcase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "006",
+    "prompt": "a photo of a fork",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "007",
+    "prompt": "a photo of a surfboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "008",
+    "prompt": "a photo of a refrigerator",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "009",
+    "prompt": "a photo of a cup",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "010",
+    "prompt": "a photo of a microwave",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "011",
+    "prompt": "a photo of a potted plant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "012",
+    "prompt": "a photo of a snowboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "013",
+    "prompt": "a photo of a zebra",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "014",
+    "prompt": "a photo of a parking meter",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "015",
+    "prompt": "a photo of a spoon",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "016",
+    "prompt": "a photo of a skateboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "017",
+    "prompt": "a photo of a car",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "018",
+    "prompt": "a photo of a motorcycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "019",
+    "prompt": "a photo of a traffic light",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "020",
+    "prompt": "a photo of a book",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "021",
+    "prompt": "a photo of a couch",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "022",
+    "prompt": "a photo of a backpack",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "023",
+    "prompt": "a photo of a computer keyboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "024",
+    "prompt": "a photo of a toaster",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "025",
+    "prompt": "a photo of a bird",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "026",
+    "prompt": "a photo of a bowl",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "027",
+    "prompt": "a photo of a dog",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "028",
+    "prompt": "a photo of a tie",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "029",
+    "prompt": "a photo of a laptop",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "030",
+    "prompt": "a photo of a computer mouse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "031",
+    "prompt": "a photo of a sandwich",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "032",
+    "prompt": "a photo of a baseball bat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "033",
+    "prompt": "a photo of a train",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "034",
+    "prompt": "a photo of a cell phone",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "035",
+    "prompt": "a photo of a chair",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "036",
+    "prompt": "a photo of a tv",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "037",
+    "prompt": "a photo of a broccoli",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "038",
+    "prompt": "a photo of a bed",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "039",
+    "prompt": "a photo of a skis",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "040",
+    "prompt": "a photo of a handbag",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "041",
+    "prompt": "a photo of a pizza",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "042",
+    "prompt": "a photo of a frisbee",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "043",
+    "prompt": "a photo of a scissors",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "044",
+    "prompt": "a photo of a bottle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "045",
+    "prompt": "a photo of an elephant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "046",
+    "prompt": "a photo of a toilet",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "047",
+    "prompt": "a photo of an oven",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "048",
+    "prompt": "a photo of an orange",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "049",
+    "prompt": "a photo of a person",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "050",
+    "prompt": "a photo of a teddy bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "051",
+    "prompt": "a photo of a vase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "052",
+    "prompt": "a photo of a banana",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "053",
+    "prompt": "a photo of a toothbrush",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "054",
+    "prompt": "a photo of a tv remote",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "055",
+    "prompt": "a photo of a dining table",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "056",
+    "prompt": "a photo of a stop sign",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "057",
+    "prompt": "a photo of a sheep",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "058",
+    "prompt": "a photo of a fire hydrant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "059",
+    "prompt": "a photo of an airplane",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "060",
+    "prompt": "a photo of a giraffe",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "061",
+    "prompt": "a photo of a horse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "062",
+    "prompt": "a photo of a cat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "063",
+    "prompt": "a photo of a donut",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "064",
+    "prompt": "a photo of a boat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "065",
+    "prompt": "a photo of a baseball glove",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "066",
+    "prompt": "a photo of a hair drier",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "067",
+    "prompt": "a photo of a sink",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "068",
+    "prompt": "a photo of a cake",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "069",
+    "prompt": "a photo of a wine glass",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "070",
+    "prompt": "a photo of an apple",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "071",
+    "prompt": "a photo of a bus",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "072",
+    "prompt": "a photo of a tennis racket",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "073",
+    "prompt": "a photo of a knife",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "074",
+    "prompt": "a photo of a hot dog",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "075",
+    "prompt": "a photo of a truck",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "076",
+    "prompt": "a photo of an umbrella",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "077",
+    "prompt": "a photo of a sports ball",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "078",
+    "prompt": "a photo of a bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "079",
+    "prompt": "a photo of a kite",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "080",
+    "prompt": "a photo of a bench and a sports ball",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "081",
+    "prompt": "a photo of a toothbrush and a snowboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "082",
+    "prompt": "a photo of a toaster and an oven",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "083",
+    "prompt": "a photo of a broccoli and a vase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "084",
+    "prompt": "a photo of a tennis racket and a wine glass",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "085",
+    "prompt": "a photo of a fork and a knife",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "086",
+    "prompt": "a photo of a hair drier and a cake",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "087",
+    "prompt": "a photo of a horse and a giraffe",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "088",
+    "prompt": "a photo of a horse and a computer keyboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "089",
+    "prompt": "a photo of a toothbrush and a carrot",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "090",
+    "prompt": "a photo of a cake and a zebra",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "091",
+    "prompt": "a photo of a hair drier and a bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "092",
+    "prompt": "a photo of a knife and a zebra",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "093",
+    "prompt": "a photo of a couch and a wine glass",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "094",
+    "prompt": "a photo of a frisbee and a vase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "095",
+    "prompt": "a photo of a book and a laptop",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "096",
+    "prompt": "a photo of a dining table and a bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "097",
+    "prompt": "a photo of a frisbee and a couch",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "098",
+    "prompt": "a photo of a couch and a horse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "099",
+    "prompt": "a photo of a toilet and a computer mouse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "100",
+    "prompt": "a photo of a bottle and a refrigerator",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "101",
+    "prompt": "a photo of a potted plant and a backpack",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "102",
+    "prompt": "a photo of a skateboard and a cake",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "103",
+    "prompt": "a photo of a broccoli and a parking meter",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "104",
+    "prompt": "a photo of a zebra and a bed",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "105",
+    "prompt": "a photo of an oven and a bed",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "106",
+    "prompt": "a photo of a baseball bat and a fork",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "107",
+    "prompt": "a photo of a vase and a spoon",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "108",
+    "prompt": "a photo of a skateboard and a sink",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "109",
+    "prompt": "a photo of a pizza and a bench",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "110",
+    "prompt": "a photo of a bowl and a pizza",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "111",
+    "prompt": "a photo of a tennis racket and a bird",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "112",
+    "prompt": "a photo of a wine glass and a bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "113",
+    "prompt": "a photo of a fork and a book",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "114",
+    "prompt": "a photo of a scissors and a bowl",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "115",
+    "prompt": "a photo of a laptop and a carrot",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "116",
+    "prompt": "a photo of a stop sign and a bottle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "117",
+    "prompt": "a photo of a microwave and a truck",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "118",
+    "prompt": "a photo of a person and a bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "119",
+    "prompt": "a photo of a frisbee and a cell phone",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "120",
+    "prompt": "a photo of a parking meter and a teddy bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "121",
+    "prompt": "a photo of a tennis racket and a bicycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "122",
+    "prompt": "a photo of a stop sign and a motorcycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "123",
+    "prompt": "a photo of a fire hydrant and a tennis racket",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "124",
+    "prompt": "a photo of a scissors and a sandwich",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "125",
+    "prompt": "a photo of a pizza and a book",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "126",
+    "prompt": "a photo of a giraffe and a computer mouse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "127",
+    "prompt": "a photo of a stop sign and a toaster",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "128",
+    "prompt": "a photo of a computer mouse and a zebra",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "129",
+    "prompt": "a photo of a chair and a bench",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "130",
+    "prompt": "a photo of a tv and a carrot",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "131",
+    "prompt": "a photo of a surfboard and a suitcase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "132",
+    "prompt": "a photo of a computer keyboard and a laptop",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "133",
+    "prompt": "a photo of a computer keyboard and a microwave",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "134",
+    "prompt": "a photo of a scissors and a bird",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "135",
+    "prompt": "a photo of a person and a snowboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "136",
+    "prompt": "a photo of a cow and a horse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "137",
+    "prompt": "a photo of a handbag and a refrigerator",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "138",
+    "prompt": "a photo of a chair and a laptop",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "139",
+    "prompt": "a photo of a toothbrush and a bench",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "140",
+    "prompt": "a photo of a book and a baseball bat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "141",
+    "prompt": "a photo of a horse and a train",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "142",
+    "prompt": "a photo of a bench and a vase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "143",
+    "prompt": "a photo of a traffic light and a backpack",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "144",
+    "prompt": "a photo of a sports ball and a cow",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "145",
+    "prompt": "a photo of a computer mouse and a spoon",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "146",
+    "prompt": "a photo of a tv and a bicycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "147",
+    "prompt": "a photo of a bench and a snowboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "148",
+    "prompt": "a photo of a toothbrush and a toilet",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "149",
+    "prompt": "a photo of a person and an apple",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "150",
+    "prompt": "a photo of a sink and a sports ball",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "151",
+    "prompt": "a photo of a stop sign and a dog",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "152",
+    "prompt": "a photo of a knife and a stop sign",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "153",
+    "prompt": "a photo of a wine glass and a handbag",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "154",
+    "prompt": "a photo of a bowl and a skis",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "155",
+    "prompt": "a photo of a frisbee and an apple",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "156",
+    "prompt": "a photo of a computer keyboard and a cell phone",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "157",
+    "prompt": "a photo of a stop sign and a fork",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "158",
+    "prompt": "a photo of a potted plant and a boat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "159",
+    "prompt": "a photo of a tv and a cell phone",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "160",
+    "prompt": "a photo of a tie and a broccoli",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "161",
+    "prompt": "a photo of a potted plant and a donut",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "162",
+    "prompt": "a photo of a person and a sink",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "163",
+    "prompt": "a photo of a couch and a snowboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "164",
+    "prompt": "a photo of a fork and a baseball glove",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "165",
+    "prompt": "a photo of an apple and a toothbrush",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "166",
+    "prompt": "a photo of a bus and a baseball glove",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "167",
+    "prompt": "a photo of a person and a stop sign",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "168",
+    "prompt": "a photo of a carrot and a couch",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "169",
+    "prompt": "a photo of a baseball bat and a bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "170",
+    "prompt": "a photo of a fire hydrant and a train",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "171",
+    "prompt": "a photo of a baseball glove and a carrot",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "172",
+    "prompt": "a photo of a microwave and a bench",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "173",
+    "prompt": "a photo of a cake and a stop sign",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "174",
+    "prompt": "a photo of a car and a computer mouse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "175",
+    "prompt": "a photo of a suitcase and a dining table",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "176",
+    "prompt": "a photo of a person and a traffic light",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "177",
+    "prompt": "a photo of a cell phone and a horse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "178",
+    "prompt": "a photo of a baseball bat and a giraffe",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "179",
+    "prompt": "a photo of two clocks",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "180",
+    "prompt": "a photo of two backpacks",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "181",
+    "prompt": "a photo of four handbags",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "182",
+    "prompt": "a photo of two frisbees",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "183",
+    "prompt": "a photo of three sports balls",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "184",
+    "prompt": "a photo of two bears",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "185",
+    "prompt": "a photo of two ties",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "186",
+    "prompt": "a photo of four sinks",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "187",
+    "prompt": "a photo of two toothbrushs",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "188",
+    "prompt": "a photo of three persons",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "189",
+    "prompt": "a photo of three tennis rackets",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "190",
+    "prompt": "a photo of four bowls",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "191",
+    "prompt": "a photo of four vases",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "192",
+    "prompt": "a photo of three cups",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "193",
+    "prompt": "a photo of four computer keyboards",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "194",
+    "prompt": "a photo of three sinks",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "195",
+    "prompt": "a photo of two ovens",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "196",
+    "prompt": "a photo of two toilets",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "197",
+    "prompt": "a photo of two bicycles",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "198",
+    "prompt": "a photo of two trains",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "199",
+    "prompt": "a photo of three oranges",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "200",
+    "prompt": "a photo of three buses",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "201",
+    "prompt": "a photo of three handbags",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "202",
+    "prompt": "a photo of three snowboards",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "203",
+    "prompt": "a photo of two snowboards",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "204",
+    "prompt": "a photo of four dogs",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "205",
+    "prompt": "a photo of three apples",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "206",
+    "prompt": "a photo of two sheeps",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "207",
+    "prompt": "a photo of three hot dogs",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "208",
+    "prompt": "a photo of three zebras",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "209",
+    "prompt": "a photo of three kites",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "210",
+    "prompt": "a photo of four apples",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "211",
+    "prompt": "a photo of three cell phones",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "212",
+    "prompt": "a photo of four baseball gloves",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "213",
+    "prompt": "a photo of three computer keyboards",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "214",
+    "prompt": "a photo of two beds",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "215",
+    "prompt": "a photo of two tv remotes",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "216",
+    "prompt": "a photo of three fire hydrants",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "217",
+    "prompt": "a photo of three books",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "218",
+    "prompt": "a photo of four giraffes",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "219",
+    "prompt": "a photo of two vases",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "220",
+    "prompt": "a photo of four donuts",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "221",
+    "prompt": "a photo of four chairs",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "222",
+    "prompt": "a photo of three baseball bats",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "223",
+    "prompt": "a photo of four stop signs",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "224",
+    "prompt": "a photo of two pizzas",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "225",
+    "prompt": "a photo of three refrigerators",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "226",
+    "prompt": "a photo of two fire hydrants",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "227",
+    "prompt": "a photo of three giraffes",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "228",
+    "prompt": "a photo of four tvs",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "229",
+    "prompt": "a photo of three wine glasses",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "230",
+    "prompt": "a photo of four broccolis",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "231",
+    "prompt": "a photo of three trucks",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "232",
+    "prompt": "a photo of two trucks",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "233",
+    "prompt": "a photo of two carrots",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "234",
+    "prompt": "a photo of two sandwichs",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "235",
+    "prompt": "a photo of four traffic lights",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "236",
+    "prompt": "a photo of four clocks",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "237",
+    "prompt": "a photo of two cars",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "238",
+    "prompt": "a photo of two bananas",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "239",
+    "prompt": "a photo of two wine glasses",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "240",
+    "prompt": "a photo of three pizzas",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "241",
+    "prompt": "a photo of four knifes",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "242",
+    "prompt": "a photo of three suitcases",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "243",
+    "prompt": "a photo of four zebras",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "244",
+    "prompt": "a photo of two teddy bears",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "245",
+    "prompt": "a photo of four skateboards",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "246",
+    "prompt": "a photo of four hot dogs",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "247",
+    "prompt": "a photo of three birds",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "248",
+    "prompt": "a photo of four boats",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "249",
+    "prompt": "a photo of four microwaves",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "250",
+    "prompt": "a photo of two hair driers",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "251",
+    "prompt": "a photo of three laptops",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "252",
+    "prompt": "a photo of three cows",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "253",
+    "prompt": "a photo of two parking meters",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "254",
+    "prompt": "a photo of four benchs",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "255",
+    "prompt": "a photo of three benchs",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "256",
+    "prompt": "a photo of four frisbees",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "257",
+    "prompt": "a photo of four books",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "258",
+    "prompt": "a photo of four buses",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "259",
+    "prompt": "a photo of a blue fire hydrant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "260",
+    "prompt": "a photo of a pink car",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "261",
+    "prompt": "a photo of a purple cup",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "262",
+    "prompt": "a photo of a blue cow",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "263",
+    "prompt": "a photo of a yellow boat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "264",
+    "prompt": "a photo of a blue umbrella",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "265",
+    "prompt": "a photo of a blue elephant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "266",
+    "prompt": "a photo of a yellow elephant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "267",
+    "prompt": "a photo of a red bicycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "268",
+    "prompt": "a photo of a purple suitcase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "269",
+    "prompt": "a photo of a purple hair drier",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "270",
+    "prompt": "a photo of a white sandwich",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "271",
+    "prompt": "a photo of a purple elephant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "272",
+    "prompt": "a photo of a green microwave",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "273",
+    "prompt": "a photo of a red zebra",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "274",
+    "prompt": "a photo of a red apple",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "275",
+    "prompt": "a photo of a yellow tv remote",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "276",
+    "prompt": "a photo of a blue toilet",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "277",
+    "prompt": "a photo of an orange orange",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "278",
+    "prompt": "a photo of a black donut",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "279",
+    "prompt": "a photo of a red vase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "280",
+    "prompt": "a photo of a purple pizza",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "281",
+    "prompt": "a photo of a pink skateboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "282",
+    "prompt": "a photo of a green skateboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "283",
+    "prompt": "a photo of a purple bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "284",
+    "prompt": "a photo of a brown chair",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "285",
+    "prompt": "a photo of a brown computer keyboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "286",
+    "prompt": "a photo of an orange cow",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "287",
+    "prompt": "a photo of a brown skis",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "288",
+    "prompt": "a photo of a white kite",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "289",
+    "prompt": "a photo of a red dog",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "290",
+    "prompt": "a photo of a green couch",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "291",
+    "prompt": "a photo of a yellow airplane",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "292",
+    "prompt": "a photo of an orange tv",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "293",
+    "prompt": "a photo of a white scissors",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "294",
+    "prompt": "a photo of a pink cell phone",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "295",
+    "prompt": "a photo of a green surfboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "296",
+    "prompt": "a photo of a white fire hydrant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "297",
+    "prompt": "a photo of a black bicycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "298",
+    "prompt": "a photo of a purple carrot",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "299",
+    "prompt": "a photo of a black dining table",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "300",
+    "prompt": "a photo of a purple potted plant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "301",
+    "prompt": "a photo of a purple backpack",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "302",
+    "prompt": "a photo of a yellow train",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "303",
+    "prompt": "a photo of a pink potted plant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "304",
+    "prompt": "a photo of a red giraffe",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "305",
+    "prompt": "a photo of a brown bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "306",
+    "prompt": "a photo of a black train",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "307",
+    "prompt": "a photo of an orange laptop",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "308",
+    "prompt": "a photo of a green hot dog",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "309",
+    "prompt": "a photo of a yellow parking meter",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "310",
+    "prompt": "a photo of a red potted plant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "311",
+    "prompt": "a photo of a green traffic light",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "312",
+    "prompt": "a photo of a blue tv",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "313",
+    "prompt": "a photo of a brown refrigerator",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "314",
+    "prompt": "a photo of a black tv remote",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "315",
+    "prompt": "a photo of a purple scissors",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "316",
+    "prompt": "a photo of a yellow orange",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "317",
+    "prompt": "a photo of a brown toaster",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "318",
+    "prompt": "a photo of a red parking meter",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "319",
+    "prompt": "a photo of a brown orange",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "320",
+    "prompt": "a photo of a green clock",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "321",
+    "prompt": "a photo of a white sheep",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "322",
+    "prompt": "a photo of a yellow oven",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "323",
+    "prompt": "a photo of a green vase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "324",
+    "prompt": "a photo of a black teddy bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "325",
+    "prompt": "a photo of a yellow carrot",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "326",
+    "prompt": "a photo of a black hot dog",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "327",
+    "prompt": "a photo of a red scissors",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "328",
+    "prompt": "a photo of a white teddy bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "329",
+    "prompt": "a photo of a black skis",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "330",
+    "prompt": "a photo of a blue dining table",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "331",
+    "prompt": "a photo of a black refrigerator",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "332",
+    "prompt": "a photo of a white dog",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "333",
+    "prompt": "a photo of an orange scissors",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "334",
+    "prompt": "a photo of a red cell phone",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "335",
+    "prompt": "a photo of a white orange",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "336",
+    "prompt": "a photo of a blue clock",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "337",
+    "prompt": "a photo of a blue carrot",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "338",
+    "prompt": "a photo of a green motorcycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "339",
+    "prompt": "a photo of a pink stop sign",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "340",
+    "prompt": "a photo of a black vase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "341",
+    "prompt": "a photo of a black backpack",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "342",
+    "prompt": "a photo of a red car",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "343",
+    "prompt": "a photo of a green computer mouse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "344",
+    "prompt": "a photo of a red backpack",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "345",
+    "prompt": "a photo of a green bus",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "346",
+    "prompt": "a photo of an orange toaster",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "347",
+    "prompt": "a photo of a yellow fork",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "348",
+    "prompt": "a photo of a pink parking meter",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "349",
+    "prompt": "a photo of a blue book",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "350",
+    "prompt": "a photo of a yellow broccoli",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "351",
+    "prompt": "a photo of an orange computer mouse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "352",
+    "prompt": "a photo of a red cake",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "353",
+    "prompt": "a photo of a dog right of a teddy bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "354",
+    "prompt": "a photo of a wine glass above a kite",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "355",
+    "prompt": "a photo of a couch below a cup",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "356",
+    "prompt": "a photo of a laptop left of a cow",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "357",
+    "prompt": "a photo of a fork above a hair drier",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "358",
+    "prompt": "a photo of a tie right of a baseball bat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "359",
+    "prompt": "a photo of a stop sign above a fork",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "360",
+    "prompt": "a photo of a bird below a skateboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "361",
+    "prompt": "a photo of an apple above a tv",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "362",
+    "prompt": "a photo of a train above a potted plant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "363",
+    "prompt": "a photo of a truck left of a refrigerator",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "364",
+    "prompt": "a photo of a tv remote below a cow",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "365",
+    "prompt": "a photo of a bottle right of a train",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "366",
+    "prompt": "a photo of a dog above a cow",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "367",
+    "prompt": "a photo of a skateboard above a person",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "368",
+    "prompt": "a photo of a baseball glove below an umbrella",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "369",
+    "prompt": "a photo of a dining table right of an oven",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "370",
+    "prompt": "a photo of a hot dog left of a suitcase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "371",
+    "prompt": "a photo of a bus below a toothbrush",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "372",
+    "prompt": "a photo of a backpack right of a sandwich",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "373",
+    "prompt": "a photo of a cake below a baseball bat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "374",
+    "prompt": "a photo of a dog right of a tie",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "375",
+    "prompt": "a photo of a suitcase right of a boat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "376",
+    "prompt": "a photo of a bear above a clock",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "377",
+    "prompt": "a photo of a tv remote left of an umbrella",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "378",
+    "prompt": "a photo of a sports ball left of an umbrella",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "379",
+    "prompt": "a photo of a train right of a dining table",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "380",
+    "prompt": "a photo of a hair drier below an elephant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "381",
+    "prompt": "a photo of a tennis racket right of a spoon",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "382",
+    "prompt": "a photo of a wine glass right of a hot dog",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "383",
+    "prompt": "a photo of a computer mouse left of a bench",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "384",
+    "prompt": "a photo of a carrot left of an orange",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "385",
+    "prompt": "a photo of a kite above a toothbrush",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "386",
+    "prompt": "a photo of a toaster below a traffic light",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "387",
+    "prompt": "a photo of a cat below a baseball glove",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "388",
+    "prompt": "a photo of a skis right of a zebra",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "389",
+    "prompt": "a photo of a stop sign above a chair",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "390",
+    "prompt": "a photo of a stop sign above a parking meter",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "391",
+    "prompt": "a photo of a hot dog right of a skateboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "392",
+    "prompt": "a photo of a pizza below a computer keyboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "393",
+    "prompt": "a photo of a hair drier left of a toilet",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "394",
+    "prompt": "a photo of a cow left of a stop sign",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "395",
+    "prompt": "a photo of a suitcase above a skis",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "396",
+    "prompt": "a photo of a book above a laptop",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "397",
+    "prompt": "a photo of a toothbrush below a pizza",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "398",
+    "prompt": "a photo of a toilet left of a kite",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "399",
+    "prompt": "a photo of a tie above a sink",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "400",
+    "prompt": "a photo of a bird left of a couch",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "401",
+    "prompt": "a photo of a bed right of a sports ball",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "402",
+    "prompt": "a photo of an elephant below a surfboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "403",
+    "prompt": "a photo of a frisbee right of a motorcycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "404",
+    "prompt": "a photo of a vase above a fire hydrant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "405",
+    "prompt": "a photo of a zebra left of an elephant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "406",
+    "prompt": "a photo of a bench left of a bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "407",
+    "prompt": "a photo of a donut right of a bench",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "408",
+    "prompt": "a photo of a frisbee below a horse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "409",
+    "prompt": "a photo of a computer keyboard above a snowboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "410",
+    "prompt": "a photo of a tv below a cow",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "411",
+    "prompt": "a photo of an elephant below a horse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "412",
+    "prompt": "a photo of a suitcase left of a banana",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "413",
+    "prompt": "a photo of a train below an airplane",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "414",
+    "prompt": "a photo of a cat below a backpack",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "415",
+    "prompt": "a photo of a backpack below a cake",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "416",
+    "prompt": "a photo of a sandwich below a knife",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "417",
+    "prompt": "a photo of a bicycle above a parking meter",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "418",
+    "prompt": "a photo of a knife right of a suitcase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "419",
+    "prompt": "a photo of a hot dog above a knife",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "420",
+    "prompt": "a photo of a zebra right of a parking meter",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "421",
+    "prompt": "a photo of a chair left of a zebra",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "422",
+    "prompt": "a photo of a cow below an airplane",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "423",
+    "prompt": "a photo of a cup left of an umbrella",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "424",
+    "prompt": "a photo of a zebra below a computer keyboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "425",
+    "prompt": "a photo of a zebra below a broccoli",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "426",
+    "prompt": "a photo of a laptop below a sports ball",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "427",
+    "prompt": "a photo of a truck left of a baseball bat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "428",
+    "prompt": "a photo of a refrigerator above a baseball bat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "429",
+    "prompt": "a photo of a tv above a baseball bat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "430",
+    "prompt": "a photo of a baseball glove right of a bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "431",
+    "prompt": "a photo of a refrigerator below a scissors",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "432",
+    "prompt": "a photo of a dining table above a suitcase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "433",
+    "prompt": "a photo of a parking meter above a broccoli",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "434",
+    "prompt": "a photo of a frisbee above a truck",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "435",
+    "prompt": "a photo of a pizza right of a banana",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "436",
+    "prompt": "a photo of a bus above a boat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "437",
+    "prompt": "a photo of a cell phone left of a tennis racket",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "438",
+    "prompt": "a photo of a horse right of a broccoli",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "439",
+    "prompt": "a photo of a broccoli above a bottle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "440",
+    "prompt": "a photo of a vase right of a horse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "441",
+    "prompt": "a photo of a bear above a spoon",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "442",
+    "prompt": "a photo of a zebra right of a bed",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "443",
+    "prompt": "a photo of a cow right of a laptop",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "444",
+    "prompt": "a photo of a bed right of a frisbee",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "445",
+    "prompt": "a photo of a tie right of a motorcycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "446",
+    "prompt": "a photo of a laptop right of a tv",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "447",
+    "prompt": "a photo of a cell phone right of a chair",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "448",
+    "prompt": "a photo of a couch below a potted plant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "449",
+    "prompt": "a photo of a clock below a tv",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "450",
+    "prompt": "a photo of a couch below a vase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "451",
+    "prompt": "a photo of a donut below a cat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "452",
+    "prompt": "a photo of a couch left of a toaster",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "453",
+    "prompt": "a photo of a purple wine glass and a black apple",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "454",
+    "prompt": "a photo of a green bus and a purple microwave",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "455",
+    "prompt": "a photo of a green skis and a brown airplane",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "456",
+    "prompt": "a photo of a yellow computer keyboard and a black sink",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "457",
+    "prompt": "a photo of a pink oven and a green motorcycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "458",
+    "prompt": "a photo of a purple parking meter and a red laptop",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "459",
+    "prompt": "a photo of a yellow skateboard and an orange computer mouse",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "460",
+    "prompt": "a photo of a red skis and a brown tie",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "461",
+    "prompt": "a photo of a pink skateboard and a black train",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "462",
+    "prompt": "a photo of a white handbag and a purple bed",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "463",
+    "prompt": "a photo of a purple elephant and a brown sports ball",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "464",
+    "prompt": "a photo of a purple dog and a black dining table",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "465",
+    "prompt": "a photo of a white dining table and a red car",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "466",
+    "prompt": "a photo of a blue cell phone and a green apple",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "467",
+    "prompt": "a photo of a red car and an orange potted plant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "468",
+    "prompt": "a photo of a brown carrot and a white potted plant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "469",
+    "prompt": "a photo of a black kite and a green bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "470",
+    "prompt": "a photo of a blue laptop and a brown bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "471",
+    "prompt": "a photo of a green teddy bear and a brown kite",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "472",
+    "prompt": "a photo of a yellow stop sign and a blue potted plant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "473",
+    "prompt": "a photo of an orange snowboard and a green cat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "474",
+    "prompt": "a photo of an orange truck and a pink sink",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "475",
+    "prompt": "a photo of a brown hot dog and a purple pizza",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "476",
+    "prompt": "a photo of a green couch and an orange umbrella",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "477",
+    "prompt": "a photo of a brown bed and a pink cell phone",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "478",
+    "prompt": "a photo of a black broccoli and a yellow cake",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "479",
+    "prompt": "a photo of a red train and a purple bear",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "480",
+    "prompt": "a photo of a purple tennis racket and a black sink",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "481",
+    "prompt": "a photo of a blue vase and a black banana",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "482",
+    "prompt": "a photo of a blue clock and a white cup",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "483",
+    "prompt": "a photo of a red umbrella and a blue couch",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "484",
+    "prompt": "a photo of a white handbag and a red giraffe",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "485",
+    "prompt": "a photo of a pink tv remote and a blue airplane",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "486",
+    "prompt": "a photo of a pink handbag and a black scissors",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "487",
+    "prompt": "a photo of a brown car and a pink hair drier",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "488",
+    "prompt": "a photo of a black bus and a brown cell phone",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "489",
+    "prompt": "a photo of a purple sheep and a pink banana",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "490",
+    "prompt": "a photo of a blue handbag and a white cell phone",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "491",
+    "prompt": "a photo of a white pizza and a green umbrella",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "492",
+    "prompt": "a photo of a white tie and a purple skateboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "493",
+    "prompt": "a photo of a yellow sports ball and a green boat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "494",
+    "prompt": "a photo of a white wine glass and a brown giraffe",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "495",
+    "prompt": "a photo of a yellow bowl and a white baseball glove",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "496",
+    "prompt": "a photo of an orange microwave and a black spoon",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "497",
+    "prompt": "a photo of an orange skateboard and a pink bowl",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "498",
+    "prompt": "a photo of a blue toilet and a white suitcase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "499",
+    "prompt": "a photo of a white boat and an orange hot dog",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "500",
+    "prompt": "a photo of a yellow dining table and a pink dog",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "501",
+    "prompt": "a photo of a red cake and a purple chair",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "502",
+    "prompt": "a photo of a blue tie and a pink dining table",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "503",
+    "prompt": "a photo of a blue cow and a black computer keyboard",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "504",
+    "prompt": "a photo of a yellow pizza and a green oven",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "505",
+    "prompt": "a photo of a red laptop and a brown car",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "506",
+    "prompt": "a photo of a purple computer keyboard and a blue scissors",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "507",
+    "prompt": "a photo of a green surfboard and an orange oven",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "508",
+    "prompt": "a photo of a yellow parking meter and a pink refrigerator",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "509",
+    "prompt": "a photo of a brown computer mouse and a purple bottle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "510",
+    "prompt": "a photo of a red umbrella and a green cow",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "511",
+    "prompt": "a photo of a red giraffe and a black cell phone",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "512",
+    "prompt": "a photo of a brown oven and a purple train",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "513",
+    "prompt": "a photo of a blue baseball bat and a pink book",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "514",
+    "prompt": "a photo of a green cup and a yellow bowl",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "515",
+    "prompt": "a photo of a yellow suitcase and a brown bus",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "516",
+    "prompt": "a photo of an orange motorcycle and a pink donut",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "517",
+    "prompt": "a photo of an orange giraffe and a white baseball glove",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "518",
+    "prompt": "a photo of an orange handbag and a green carrot",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "519",
+    "prompt": "a photo of a black bottle and a white refrigerator",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "520",
+    "prompt": "a photo of a white dog and a blue potted plant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "521",
+    "prompt": "a photo of an orange handbag and a red car",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "522",
+    "prompt": "a photo of a red stop sign and a blue book",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "523",
+    "prompt": "a photo of a yellow car and an orange toothbrush",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "524",
+    "prompt": "a photo of a black potted plant and a yellow toilet",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "525",
+    "prompt": "a photo of a brown dining table and a white suitcase",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "526",
+    "prompt": "a photo of an orange donut and a yellow stop sign",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "527",
+    "prompt": "a photo of a green suitcase and a blue boat",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "528",
+    "prompt": "a photo of an orange tennis racket and a yellow sports ball",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "529",
+    "prompt": "a photo of a purple computer keyboard and a red chair",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "530",
+    "prompt": "a photo of a purple suitcase and an orange pizza",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "531",
+    "prompt": "a photo of a white bottle and a blue sheep",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "532",
+    "prompt": "a photo of a purple backpack and a white umbrella",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "533",
+    "prompt": "a photo of an orange potted plant and a black spoon",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "534",
+    "prompt": "a photo of a green tennis racket and a black dog",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "535",
+    "prompt": "a photo of a yellow handbag and a blue refrigerator",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "536",
+    "prompt": "a photo of a pink broccoli and a red sink",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "537",
+    "prompt": "a photo of a red bowl and a pink sink",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "538",
+    "prompt": "a photo of a white toilet and a red apple",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "539",
+    "prompt": "a photo of a pink dining table and a black sandwich",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "540",
+    "prompt": "a photo of a black car and a green parking meter",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "541",
+    "prompt": "a photo of a yellow bird and a black motorcycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "542",
+    "prompt": "a photo of a brown giraffe and a white stop sign",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "543",
+    "prompt": "a photo of a white banana and a black elephant",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "544",
+    "prompt": "a photo of an orange cow and a purple sandwich",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "545",
+    "prompt": "a photo of a red clock and a black cell phone",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "546",
+    "prompt": "a photo of a brown knife and a blue donut",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "547",
+    "prompt": "a photo of a red cup and a pink handbag",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "548",
+    "prompt": "a photo of a yellow bicycle and a red motorcycle",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "549",
+    "prompt": "a photo of a red orange and a purple broccoli",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "550",
+    "prompt": "a photo of an orange traffic light and a white toilet",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "551",
+    "prompt": "a photo of a green cup and a red pizza",
+    "data_source": "GenEval"
+  },
+  {
+    "image_id": "552",
+    "prompt": "a photo of a blue pizza and a yellow baseball glove",
+    "data_source": "GenEval"
+  }
+]
