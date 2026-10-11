@@ -126,8 +126,8 @@ pip install torch==2.11.0 torchvision==0.26.0 torchaudio==2.11.0 \
 pip install -e .
 
 # Optional
-pip install -e ".[flash-attn]" --no-build-isolation  # FlashAttention; sdpa without it
 pip install -e ".[vllm]" --no-build-isolation        # vLLM judge (Step 2 options 2 and 3)
+pip install -e ".[flash-attn]" --no-build-isolation  # FlashAttention; sdpa without it
 pip install -e ".[aesthetic]"                        # laion_aesthetic_score (AGPL-3.0 package)
 ```
 
