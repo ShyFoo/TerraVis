@@ -13,6 +13,7 @@ from typing import Any
 import torch
 from transformers import GenerationConfig
 
+from terravis import judge_pool
 from terravis.scores.base import load_image, order_chat_content
 from terravis.scores.vlm_chat import build_chat_messages, to_openai_chat_kwargs, to_vllm_sampling_params
 
@@ -109,40 +110,41 @@ class VLLMJudge:
 
 
 class RemoteVLLMJudge:
-    def __init__(self, model_name: str, base_url: str, sampling_params: dict):
-        from openai import OpenAI
+    """Calls go through ``terravis.judge_pool``: the image is encoded once per file, and with
+    ``TERRAVIS_JUDGE_PROCS`` > 0 the requests are made by worker processes."""
 
+    def __init__(self, model_name: str, base_url: str, sampling_params: dict):
         self.model_name = model_name
+        self.base_url = base_url
         self._chat_kwargs = to_openai_chat_kwargs(sampling_params)
         self._chat_kwargs.setdefault("extra_body", {})["chat_template_kwargs"] = _CHAT_TEMPLATE_KWARGS
-        self.client = OpenAI(api_key="EMPTY", base_url=base_url, timeout=600, max_retries=3)
 
-    def _create(self, text: str, pil_image: Any, **kwargs: Any) -> Any:
-        return self.client.chat.completions.create(
-            model=self.model_name, messages=build_chat_messages(text, pil_image, self.model_name), **kwargs
-        )
+    @cached_property
+    def client(self) -> Any:
+        return judge_pool.new_client(self.base_url)
+
+    def _chat(self, text: str, image: str | None, **kwargs: Any) -> tuple[str, list[tuple[str, float]]]:
+        ref = None if image is None else judge_pool.IMAGE_REF + image
+        request = {"model": self.model_name, "messages": build_chat_messages(text, ref, self.model_name), **kwargs}
+        pool = judge_pool.pool()
+        return pool.complete(self.base_url, request) if pool else judge_pool.complete(self.client, request)
 
     @staticmethod
-    def _answer(resp: Any) -> str:
+    def _answer(resp: Any) -> str:     # for subclasses that send their own request (TerraVis-web's WebJudge)
         return (resp.choices[0].message.content or "").strip()
 
     def infer(self, text: str, image: str | None = None, **overrides: Any) -> str:
-        pil_image = None if image is None else load_image(image)
-        return self._answer(self._create(text, pil_image, **{**self._chat_kwargs, **overrides}))
+        return self._chat(text, image, **{**self._chat_kwargs, **overrides})[0]
 
     def infer_many(self, texts: list[str], image: str) -> list[str]:
         if not texts:  # ThreadPoolExecutor rejects max_workers=0
             return []
-        pil_image = load_image(image)
         with ThreadPoolExecutor(max_workers=len(texts)) as pool:
-            return list(pool.map(lambda text: self._answer(self._create(text, pil_image, **self._chat_kwargs)), texts))
+            return list(pool.map(lambda text: self._chat(text, image, **self._chat_kwargs)[0], texts))
 
     def first_token(self, question: str, image: str) -> tuple[str, list[tuple[str, float]]]:
         kwargs = {"max_tokens": 8, **self._chat_kwargs, "temperature": 0.0}
-        choice = self._create(question, load_image(image), logprobs=True, top_logprobs=20, **kwargs).choices[0]
-        tokens = choice.logprobs.content if (choice.logprobs and choice.logprobs.content) else []
-        top = tokens[0].top_logprobs if tokens else []
-        return (choice.message.content or "").strip(), [(t.token, math.exp(t.logprob)) for t in top]
+        return self._chat(question, image, logprobs=True, top_logprobs=20, **kwargs)
 
 
 ENDPOINTS_ENV = "TERRAVIS_REMOTE_VLLM_ENDPOINTS"

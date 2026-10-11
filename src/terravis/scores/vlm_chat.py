@@ -16,13 +16,13 @@ def image_to_data_url(pil_image: Image.Image) -> str:
 
 
 def build_chat_messages(
-    text: str, pil_image: Image.Image | None, model_name: str | None,
+    text: str, image: Image.Image | str | None, model_name: str | None,
 ) -> list[dict[str, Any]]:
-    """One user turn; ``pil_image=None`` is text-only. Order per ``order_chat_content``, or a served
-    VLM may reply "please provide the image"."""
+    """One user turn; ``image`` is a PIL image, an image URL, or None (text-only). Order per
+    ``order_chat_content``, or a served VLM may reply "please provide the image"."""
     image_block = (
-        None if pil_image is None
-        else {"type": "image_url", "image_url": {"url": image_to_data_url(pil_image)}}
+        None if image is None
+        else {"type": "image_url", "image_url": {"url": image if isinstance(image, str) else image_to_data_url(image)}}
     )
     content = order_chat_content({"type": "text", "text": text}, image_block, model_name)
     return [{"role": "user", "content": content}]
