@@ -110,28 +110,17 @@ class VLLMJudge:
 
 
 class RemoteVLLMJudge:
-    """Calls go through ``terravis.judge_pool``: the image is encoded once per file, and with
-    ``TERRAVIS_JUDGE_PROCS`` > 0 the requests are made by worker processes."""
-
     def __init__(self, model_name: str, base_url: str, sampling_params: dict):
-        self.model_name = model_name
-        self.base_url = base_url
+        self.model_name, self.base_url, self.client = model_name, base_url, judge_pool.new_client(base_url)
         self._chat_kwargs = to_openai_chat_kwargs(sampling_params)
         self._chat_kwargs.setdefault("extra_body", {})["chat_template_kwargs"] = _CHAT_TEMPLATE_KWARGS
 
-    @cached_property
-    def client(self) -> Any:
-        return judge_pool.new_client(self.base_url)
-
     def _chat(self, text: str, image: str | None, **kwargs: Any) -> tuple[str, list[tuple[str, float]]]:
-        ref = None if image is None else judge_pool.IMAGE_REF + image
-        request = {"model": self.model_name, "messages": build_chat_messages(text, ref, self.model_name), **kwargs}
         pool = judge_pool.pool()
+        if image is not None:      # a pool worker reads the file itself
+            image = os.fspath(image) if pool else judge_pool.image_url(image)
+        request = {"model": self.model_name, "messages": build_chat_messages(text, image, self.model_name), **kwargs}
         return pool.complete(self.base_url, request) if pool else judge_pool.complete(self.client, request)
-
-    @staticmethod
-    def _answer(resp: Any) -> str:     # for subclasses that send their own request (TerraVis-web's WebJudge)
-        return (resp.choices[0].message.content or "").strip()
 
     def infer(self, text: str, image: str | None = None, **overrides: Any) -> str:
         return self._chat(text, image, **{**self._chat_kwargs, **overrides})[0]
