@@ -346,8 +346,10 @@ def generate_image(
     else:
         noise_scale_schedule = [noise_scale_start]
 
-    torch.manual_seed(seed + 1)
-    if torch.cuda.is_available(): torch.cuda.manual_seed_all(seed + 1)
+    # TerraVis deviation (was: torch.manual_seed(seed + 1); torch.cuda.manual_seed_all(seed + 1)): the flash
+    # scheduler draws its per-step noise from this private generator instead; a global reseed resets every card's
+    # default generator, so in a process rendering on several cards a (prompt, seed) no longer fixed the image.
+    step_generator = torch.Generator(device=device).manual_seed(seed + 1)
 
     def forward_once(sample, z_in, t_pixeldit, precomputed_image_embeds=None, precomputed_deepstack_image_embeds=None):
         with torch.autocast(device.type, dtype=dtype, cache_enabled=False):
@@ -435,7 +437,7 @@ def generate_image(
         model_output = -v_guided
         # model_output = clamp_tensor(model_output, percentage = 0.05)
         if scheduler_name == "flash":
-            z = sched.step(model_output.float(), step_t.to(dtype=torch.float32), z.float(), s_noise=noise_scale_schedule[step_idx], noise_clip_std=noise_clip_std, return_dict=False)[0].to(dtype)
+            z = sched.step(model_output.float(), step_t.to(dtype=torch.float32), z.float(), s_noise=noise_scale_schedule[step_idx], noise_clip_std=noise_clip_std, generator=step_generator, return_dict=False)[0].to(dtype)
         else:
             z = sched.step(model_output.float(), step_t.to(dtype=torch.float32), z.float(), return_dict=False)[0].to(dtype)
 
