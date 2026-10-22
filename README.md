@@ -353,7 +353,7 @@ terravis-summarize /path/to/output
 ```
 
 - **GenEval 2:** 100 × the mean `geneval2_score` over all 800 prompts is the official number (Overall); the per-skill and per-atomicity figures follow upstream `soft_tifa_analysis.py`: a skill pools its questions across prompts (Soft-TIFA AM), so it differs from averaging per image. Noncommercial use only (CC BY-NC 4.0).
-- **UniGenBench++ accuracies:** computed as on the official leaderboards. Short and long prompts are reported separately; each dimension pools its testpoints and Overall averages the 10 primary dimensions, so Overall differs from the mean score.
+- **UniGenBench++ accuracies:** computed as on the official leaderboards. Short and long prompts are reported separately; each of the 10 primary dimensions and 27 sub-dimensions pools its testpoints and Overall averages the 10 primary dimensions, so Overall differs from the mean score.
 - **Leaderboard judge:** Gemini 2.5 Pro on 4 images per prompt, while this run uses your judge on one; compare these accuracies only across runs scored the same way.
 - **Results:** `/path/to/output/GenEval2/raw/` and `/path/to/output/UniGenBench++/raw/`.
 - **Other prompts:** both metrics stop with an error on any prompt that is not from their own benchmark.

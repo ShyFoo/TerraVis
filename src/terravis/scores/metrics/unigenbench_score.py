@@ -21,8 +21,8 @@ _UNIGENBENCH_DESCRIPTION = (
     "testpoints on the image (binary, with a written analysis per testpoint) and "
     "the image's score is the fraction of testpoints satisfied. Range: [0, 1], "
     "higher is better. The official leaderboards (one each for short and long prompts) "
-    "pool each dimension's testpoints and average the primary dimensions for "
-    "Overall; terravis-summarize prints them from score_entries."
+    "pool each primary dimension's and sub-dimension's testpoints and average the primary "
+    "dimensions for Overall; terravis-summarize prints them from score_entries."
 )
 
 DEFAULT_UNIGENBENCH_JUDGE = "google/gemma-4-31B-it"

@@ -23,18 +23,21 @@ def mean_score(rows: list[dict[str, Any]], score_mode: str) -> tuple[str, int]:
 
 
 def unigenbench_official(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
-    """prompt_type -> {"Overall": %, <primary dimension>: %}, as on the official leaderboards (short and
-    long prompts are separate ones): a dimension pools its testpoints (upstream calculate_scores), and
-    Overall averages the primary dimensions. n/a images are skipped, as upstream."""
+    """prompt_type -> {"Overall": %, <dimension>: %}, as on the official leaderboards (short and long prompts
+    are separate ones): a primary dimension ("Attribute") and a sub-dimension ("Attribute - Color") each pool
+    their testpoints (upstream calculate_scores' primary_dimensions and sub_dimensions), and Overall averages
+    the primary dimensions. n/a images are skipped, as upstream."""
     hits = defaultdict(lambda: defaultdict(list))
     for row in rows:
         entries = row["unigenbench_score"]["score_entries"]
         for testpoint, hit in zip(entries["testpoints"], entries.get("per_testpoint", [])):
-            hits[entries["prompt_type"]][testpoint.split("-", 1)[0].strip()].append(hit)
+            for dim in {testpoint.split("-", 1)[0].strip(), testpoint}:   # "Style" has no sub-dimension
+                hits[entries["prompt_type"]][dim].append(hit)
     official = {}
     for prompt_type, dims in sorted(hits.items()):
-        acc = {dim: 100 * sum(h) / len(h) for dim, h in sorted(dims.items())}
-        official[prompt_type] = {"Overall": sum(acc.values()) / len(acc), **acc}
+        acc = {dim: 100 * sum(h) / len(h) for dim, h in sorted(dims.items())}   # each sub-dimension after its dimension
+        primary = [a for dim, a in acc.items() if "-" not in dim]
+        official[prompt_type] = {"Overall": sum(primary) / len(primary), **acc}
     return official
 
 
