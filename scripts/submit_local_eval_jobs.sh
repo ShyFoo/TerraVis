@@ -36,19 +36,20 @@ vllm_tp_size=2   # open-weight judge only; 0 = transformers, N = in-process vLLM
 
 # Or judge on a vLLM server from `bash scripts/serve_vllm_judge.sh <judge> [tp_size] [port]`:
 # the judge loads once for the whole sweep and this process needs no GPU.
-vllm_server_url=""   # e.g. "http://localhost:8000/v1"
+vllm_server_url=""   # e.g. "http://localhost:8000/v1"; several servers: space-separated
 
 if [ -n "$vllm_server_url" ]; then
-  # Keyed by the served model id, which vqa_model_name must resolve to.
+  # Keyed by the served model ids; vqa_model_name must resolve to one of them.
   TERRAVIS_REMOTE_VLLM_ENDPOINTS=$(python - "$vllm_server_url" <<'PY'
 import json, sys, urllib.request
-url = sys.argv[1].rstrip("/")
-try:
-    with urllib.request.urlopen(f"{url}/models", timeout=10) as r:
-        served = [m["id"] for m in json.load(r)["data"]]
-except Exception as e:
-    sys.exit(f"!!! no vLLM server answering at {url}/models: {e}")
-print(json.dumps({m: url for m in served}))
+endpoints = {}
+for url in (u.rstrip("/") for u in sys.argv[1].split()):
+    try:
+        with urllib.request.urlopen(f"{url}/models", timeout=10) as r:
+            endpoints.update({m["id"]: url for m in json.load(r)["data"]})
+    except Exception as e:
+        sys.exit(f"!!! no vLLM server answering at {url}/models: {e}")
+print(json.dumps(endpoints))
 PY
   )
   export TERRAVIS_REMOTE_VLLM_ENDPOINTS

@@ -9,6 +9,7 @@ import torch
 from transformers import AutoProcessor, Qwen3_5ForConditionalGeneration
 
 from terravis.scores.base import ScoreModel
+from terravis.scores.judges import ENDPOINTS_ENV, RemoteVLLMJudge, remote_endpoints
 from terravis.scores.registry import register_score_model
 from terravis.utils import use_flash_attn
 
@@ -39,6 +40,8 @@ _PROMPT = (
 
 _AXES = ("Alignment", "Coherence", "Style")
 _SCORE_LINE = re.compile(r"(Alignment|Coherence|Style) Score \(1-5\):\s*([-+]?\d+(?:\.\d+)?)")
+# Greedy on both backends: the official client sends do_sample=False, which vLLM drops (its server samples).
+_SAMPLING = {"do_sample": False, "max_new_tokens": 4096}
 
 
 def parse_acs_scores(output: str) -> dict[str, float] | None:
@@ -51,17 +54,25 @@ def parse_acs_scores(output: str) -> dict[str, float] | None:
 
 class UnifiedReward2ScoreModel(ScoreModel):
     def __init__(self, model_weight_root: str, device: str | torch.device, dtype: torch.dtype):
+        super().__init__(device=device, dtype=dtype)
+        endpoints = remote_endpoints()
+        url = endpoints.get(UNIFIED_REWARD_2_REPO_ID)
+        self.remote = RemoteVLLMJudge(UNIFIED_REWARD_2_REPO_ID, url, _SAMPLING) if url else None
+        if self.remote:
+            self.concurrency = 32   # images in flight: serve_vllm_judge.sh's --max-num-seqs
+            return
+        if endpoints:
+            print(f"unified_reward_2_score: {ENDPOINTS_ENV} lists {sorted(endpoints)} but not "
+                  f"{UNIFIED_REWARD_2_REPO_ID!r}, so it loads with transformers.")
         weights_dir = os.path.join(model_weight_root, "UnifiedReward")
-        processor = AutoProcessor.from_pretrained(UNIFIED_REWARD_2_REPO_ID, cache_dir=weights_dir)
-        model = Qwen3_5ForConditionalGeneration.from_pretrained(
+        self.processor = AutoProcessor.from_pretrained(UNIFIED_REWARD_2_REPO_ID, cache_dir=weights_dir)
+        self.model = Qwen3_5ForConditionalGeneration.from_pretrained(
             UNIFIED_REWARD_2_REPO_ID, dtype=dtype, device_map=device, cache_dir=weights_dir,
             attn_implementation="flash_attention_2" if use_flash_attn(dtype) else "sdpa",
-        )
-        model.eval()
-        super().__init__(model=model, processor=processor, device=device, dtype=dtype)
+        ).eval()
 
     @torch.inference_mode()
-    def score(self, image: str, text: str) -> dict[str, Any]:
+    def _generate(self, image: str, text: str) -> str:
         messages = [{"role": "user", "content": [
             {"type": "image", "image": image},
             {"type": "text", "text": _PROMPT.format(prompt=text)},
@@ -70,11 +81,13 @@ class UnifiedReward2ScoreModel(ScoreModel):
             messages, tokenize=True, add_generation_prompt=True, enable_thinking=False,
             return_dict=True, return_tensors="pt",
         ).to(self.model.device)
-        # Greedy: the official client sends do_sample=False, which vLLM drops (its server samples).
-        gen_ids = self.model.generate(**inputs, max_new_tokens=4096, do_sample=False)
-        output = self.processor.batch_decode(
+        gen_ids = self.model.generate(**inputs, **_SAMPLING)
+        return self.processor.batch_decode(
             gen_ids[:, inputs["input_ids"].shape[1]:], skip_special_tokens=True,
         )[0].strip()
+
+    def score(self, image: str, text: str) -> dict[str, Any]:
+        output = self.remote.infer(_PROMPT.format(prompt=text), image) if self.remote else self._generate(image, text)
         scores = parse_acs_scores(output)
         if scores is None:
             return {

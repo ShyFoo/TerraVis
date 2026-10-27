@@ -11,7 +11,7 @@ from terravis.scores.base import order_chat_content
 
 def image_to_data_url(pil_image: Image.Image) -> str:
     buf = io.BytesIO()
-    pil_image.save(buf, format="PNG")
+    pil_image.save(buf, format="PNG", icc_profile=None)   # vLLM rejects an ICC profile over 1 MB
     return "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
 
 

@@ -22,25 +22,26 @@ PROCS_ENV = "TERRAVIS_JUDGE_PROCS"
 THREADS_PER_PROC = 64       # in-flight requests per worker; a request is ~all network wait
 
 
-@lru_cache(maxsize=32)      # ~2-3 MB each; a miss costs a file read and a base64, not a PNG encode
+@lru_cache(maxsize=32)      # ~2-3 MB each
 def _data_url(path: str, mtime_ns: int, size: int) -> str:
     with Image.open(path) as im:
-        if im.format == "PNG" and im.mode == "RGB" and not {"transparency", "exif"} & im.info.keys():
-            with open(path, "rb") as fh:       # load_image's pixels as they are (vLLM would rotate by EXIF)
+        oriented = {"exif", "Raw profile type exif", "XML:com.adobe.xmp"} & im.info.keys()   # vLLM rotates by any
+        if im.format == "PNG" and im.mode == "RGB" and not oriented:
+            with open(path, "rb") as fh:       # load_image's pixels as they are
                 return "data:image/png;base64," + base64.b64encode(fh.read()).decode()
         rgb = im.convert("RGB")
     buf = io.BytesIO()
-    rgb.save(buf, format="PNG")
+    rgb.save(buf, format="PNG", icc_profile=None)   # as vlm_chat.image_to_data_url
     return "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
-_url_lock = threading.Lock()
+_url_locks = [threading.Lock() for _ in range(256)]   # striped by path: other images build in parallel
 
 
 def image_url(path: str) -> str:
     """``load_image(path)``'s pixels as a PNG data URL, built once per file version."""
     st = os.stat(path)
-    with _url_lock:     # an image's questions arrive together: one build, not one per thread
+    with _url_locks[hash(path) % 256]:     # an image's questions arrive together: one build, not one per thread
         return _data_url(path, st.st_mtime_ns, st.st_size)
 
 
@@ -73,11 +74,11 @@ def _serve() -> None:
     def handle(line: str) -> None:
         rid, base_url, request = json.loads(line)
         try:
-            for block in request["messages"][0]["content"]:     # a pool request names its image by path
+            for block in request["messages"][0]["content"]:
                 if block["type"] == "image_url":
                     block["image_url"]["url"] = image_url(block["image_url"]["url"])
             reply = [rid, True, complete(client(base_url), request)]
-        except Exception as e:  # every failure goes back to the caller
+        except Exception as e:
             status = getattr(e, "status_code", None)
             reply = [rid, False, [type(e).__name__, str(e), status if isinstance(status, int) else None]]
         with lock:
@@ -87,7 +88,7 @@ def _serve() -> None:
     threads = ThreadPoolExecutor(max_workers=THREADS_PER_PROC)
     for line in sys.stdin:
         threads.submit(handle, line)
-    os._exit(0)         # the caller is gone, and with it whoever waits on what is in flight or queued
+    os._exit(0)         # the caller is gone: don't wait for in-flight requests
 
 
 class _Worker:
@@ -101,7 +102,7 @@ class _Worker:
 
 class JudgePool:
     def __init__(self, procs: int):
-        self.lock, self.ids, self.broken = threading.Lock(), itertools.count(), ""   # broken: why no call can run
+        self.lock, self.ids, self.broken = threading.Lock(), itertools.count(), ""
         self.workers = [_Worker(self, i) for i in range(procs)]
 
     def complete(self, base_url: str, request: dict) -> tuple[str, list[tuple[str, float]]]:
@@ -111,7 +112,7 @@ class JudgePool:
         with self.lock:
             if self.broken:
                 raise RuntimeError(self.broken)
-            worker = min(self.workers, key=lambda w: len(w.pending))     # least in flight
+            worker = min(self.workers, key=lambda w: len(w.pending))
             worker.pending[rid] = fut
         try:
             with worker.lock:

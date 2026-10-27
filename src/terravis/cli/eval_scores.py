@@ -3,6 +3,8 @@
 import argparse
 import json
 import os
+from contextlib import nullcontext
+from multiprocessing.pool import ThreadPool
 from typing import Any
 
 import torch
@@ -51,14 +53,9 @@ def get_judge_label(spec: ScoreSpec, judge_name: str, clip_model_name: str) -> s
             raise ValueError("clip_score requires --clip_model_name.")
         return clip_model_name.split(":")[-1].lower()
     if not judge_name:
-        raise ValueError(f"score_mode={spec.name!r} requires --vqa_model_names or --api_model_name.")
+        flags = "--vqa_model_names or --api_model_name" if spec.supports_api else "--vqa_model_names"
+        raise ValueError(f"score_mode={spec.name!r} requires {flags}.")
     return judge_name
-
-
-def _inject_judge_model(results: list[dict[str, Any]], score_mode: str, judge_name: str) -> None:
-    if score_mode == "terravis_score":
-        for gd in results:
-            gd[score_mode]["score_entries"]["judge_model"] = judge_name
 
 
 def validate_api_args(args, spec, judge: JudgeModel | None) -> None:
@@ -171,16 +168,23 @@ def _collect_scores(args, evaluator, gen_data, run_name, desc,
     if cached:
         print(f"Resume: {len(cached)}/{len(gen_data)} images already scored in {partial_path}.")
 
+    def score(gd: dict[str, Any]) -> dict[str, Any]:
+        return evaluator(image=gd["gen_img_path"], text=gd.get("prompt"))
+
+    workers = getattr(evaluator.scorer, "concurrency", 1)   # > 1 only for a scorer whose score() is thread-safe
     scores, failed_in_a_row = [], 0
     # "w", not "a": a half-written last line would swallow the next appended row.
     # Cached rows are written first, so a crash keeps them.
-    with open(partial_path, "w", encoding="utf-8") as cache:
+    # ThreadPool, not ThreadPoolExecutor: its daemon threads let an error or Ctrl-C exit past a hung request.
+    with (ThreadPool(workers) if workers > 1 else nullcontext() as pool,
+          open(partial_path, "w", encoding="utf-8") as cache):
+        new_rows = (pool.imap if pool else map)(score, [gd for gd in gen_data if gd["image_id"] not in cached])
         cache.writelines(json.dumps({"image_id": i, "scores": s}, ensure_ascii=False) + "\n" for i, s in cached.items())
         cache.flush()
         for gd in tqdm(gen_data, desc=desc):
             row = cached.get(gd["image_id"])
             if row is None:
-                row = evaluator(image=gd["gen_img_path"], text=gd.get("prompt"))
+                row = next(new_rows)
                 cache.write(json.dumps({"image_id": gd["image_id"], "scores": row}, ensure_ascii=False) + "\n")
                 cache.flush()
             failed_in_a_row = failed_in_a_row + 1 if _unanswered(row) else 0   # cached rows are answered
@@ -241,8 +245,9 @@ def _run(args):
     for gd, scores in zip(gen_data, per_image_scores):
         gd.update(scores)
         gd.pop("gen_img_path")
+        if args.score_mode == "terravis_score":
+            gd["terravis_score"]["score_entries"]["judge_model"] = judge_name
 
-    _inject_judge_model(gen_data, args.score_mode, judge_name)
     results_path = os.path.join(raw_dir, f"t2i_scoring__raw__{tag}.json")
     with open(results_path, "w", encoding="utf-8") as f:
         json.dump(gen_data, f, ensure_ascii=False, indent=2)

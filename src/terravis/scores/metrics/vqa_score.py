@@ -1,4 +1,3 @@
-from collections.abc import Iterable
 from typing import Any
 
 from terravis.scores.judges import build_judge
@@ -12,17 +11,6 @@ VQA_SCORE_DESCRIPTION = (
 )
 
 
-def build_vqa_question(text: str) -> str:
-    """Official VQAScore binary question (linzhiqiu/t2v_metrics, Apache-2.0); every backend must ask exactly this."""
-    return f'Does this figure show "{text}"? Please answer yes or no.'
-
-
-def yes_probability(first_token_candidates: Iterable[tuple[str, float]]) -> float:
-    """Max probability among the first generated token's ``(token, probability)`` candidates that decode to "yes"."""
-    yes = [p for token, p in first_token_candidates if token.strip().lower() == "yes"]
-    return max(yes) if yes else 0.0
-
-
 class VQAScoreModel:
     """Paper: https://arxiv.org/abs/2404.01291"""
 
@@ -30,9 +18,11 @@ class VQAScoreModel:
         self.judge = judge
 
     def score(self, image: str, text: str) -> dict[str, Any]:
-        raw_answer, candidates = self.judge.first_token(build_vqa_question(text), image)
+        # Official VQAScore question (linzhiqiu/t2v_metrics, Apache-2.0).
+        question = f'Does this figure show "{text}"? Please answer yes or no.'
+        raw_answer, candidates = self.judge.first_token(question, image)
         return {
-            "score": yes_probability(candidates),
+            "score": max((p for token, p in candidates if token.strip().lower() == "yes"), default=0.0),
             "score_entries": {"raw_answers": raw_answer, "score_description": VQA_SCORE_DESCRIPTION},
         }
 

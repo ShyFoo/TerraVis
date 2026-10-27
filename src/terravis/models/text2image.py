@@ -19,6 +19,7 @@ import requests
 import torch
 from diffusers import DiffusionPipeline
 from google import genai
+from huggingface_hub import is_offline_mode
 from openai import APIStatusError, OpenAI
 from PIL import Image
 from safetensors.torch import load_file, save_file
@@ -360,7 +361,7 @@ def load_cosmos3(spec: T2IModel, weight_root: str, parallel_mode: str, dtype: st
     if torch_dt is None:
         raise ValueError(f"{spec.id}: dtype 'auto' loads the ~122G bf16 weights as fp32; name a dtype.")
     # Diffusers' sharded-checkpoint resolver needs local_files_only explicitly; HF_HUB_OFFLINE alone is not enough.
-    local_files_only = os.getenv("HF_HUB_OFFLINE", "").upper() in {"1", "ON", "YES", "TRUE"}
+    local_files_only = is_offline_mode()
     pipeline = Cosmos3DistilledModularPipeline.from_pretrained(
         spec.id, dtype=torch_dt, cache_dir=hf_cache(weight_root), local_files_only=local_files_only,
     )

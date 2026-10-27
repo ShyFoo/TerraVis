@@ -39,7 +39,7 @@ This repository is the official implementation: TerraVis and 13 common T2I metri
 
 ## News
 
-- **[2026/10]** 🤗 We released the [TerraVis human annotations](https://huggingface.co/datasets/ShyFoo/TerraVis-Annotations) on Hugging Face, comprising 13,500 world-consistency ratings for 4,500 generated images. 
+- **[2026/10]** 🤗 We released the [TerraVis human annotations](https://huggingface.co/datasets/ShyFoo/TerraVis-Annotations) on Hugging Face, comprising 13,500 world-consistency ratings for 4,500 generated images.
 - **[2026/10]** 📄 The TerraVis paper is now available on [arXiv](https://arxiv.org/abs/2610.02959).
 - **[2026/09]** 🌐 The [online evaluator](https://shyfoo.github.io/TerraVis-web/) is live: upload a generated image to get its TerraVis score, along with detected violations, supporting evidence, and severity.
 - **[2026/09]** 🎉 TerraVis has been accepted to NeurIPS 2026 (Evaluations and Datasets Track).
@@ -64,7 +64,7 @@ The 18 violation types probed in step 2:
 | Scene (3)       | Relative scale, Depth-order/occlusion, Region continuity                                                                                    |
 
 - **Scored `"n/a"`:** an ineligible image, one the judge left unanswered (a failed or blocked request), or one whose eligibility answer could not be parsed.
-- **Result JSON:** keeps every probe's raw answer, affected aspect, evidence and severity, so each score, n/a included, traces back to what the judge saw.
+- **Result JSON:** keeps the eligibility answer and reason, and every probe's raw answer, affected aspect, evidence and severity.
 - **Prompts:** [`terravis_prompts.py`](src/terravis/scores/metrics/terravis_prompts.py).
 
 ## Dataset
@@ -79,7 +79,7 @@ On COCO-T2I and GenAI-Bench, with over 13K human annotations collected via Amazo
 
 - **Prompts:** a random half of each benchmark (COCO-T2I has 200 prompts, GenAI-Bench 1,600).
 - **Images:** one 1024×1024 image per prompt from each of GPT Image 1.5, Nano Banana Pro, FLUX.2 [dev], Qwen-Image-2512 and Stable Diffusion 3.5 Large.
-- **Ratings:** three world-consistency ratings per image, collected on Amazon Mechanical Turk. Each is 1 (completely inconsistent) to 5 (fully consistent), or N/A for images out of scope such as abstract patterns, logos or charts. Annotators see the image but not its prompt.
+- **Ratings:** three world-consistency ratings per image, each 1 (completely inconsistent) to 5 (fully consistent), or N/A for images out of scope such as abstract patterns, logos or charts. Annotators see the image but not its prompt.
 
 ```python
 # pip install "datasets>=4.0"; the full download is about 7 GB
@@ -112,7 +112,7 @@ ds = load_dataset("ShyFoo/TerraVis-Annotations")  # splits: coco_t2i, genai_benc
 - **Image-level metrics** (the first twelve): score any image; `Image` metrics read the image alone, `Image + Text` metrics also its prompt.
 - **[Benchmark-specific evaluation](#benchmark-specific-evaluation)** (the last two): runs a benchmark's own protocol on metadata stored with its prompts, so it scores only images generated from that benchmark (`geneval2`, `unigenbench++`); any other prompt raises.
 - **`Any … judge`:** the judge comes from `vqa_model_names` / `api_model_name` and runs in one of four [judge options](#metrics-with-a-judge): transformers (default), in-process vLLM, a vLLM server or an API judge (`terravis_score` only).
-- **`Dedicated`:** the model downloads into `model_weight_root` and takes no model argument.
+- **`Dedicated`:** the model downloads into `model_weight_root` and takes no model argument; `unified_reward_2_score` can also run on a [vLLM server](#option-3-vllm-server).
 
 ## Installation
 
@@ -464,7 +464,6 @@ bash scripts/t2i_generation.sh <benchmark> <model_name> <num_gpus>
 RESUME=1 bash scripts/t2i_generation.sh genai_bench /path/to/my_model 1   # skip prompts already rendered
 ```
 
-- Your own prompts are matched by list position: only append to the file.
 - A failed prompt leaves a `.txt` marker that also counts as rendered; delete it to retry.
 - Step 2 scores a run only once every prompt has an image.
 
@@ -530,7 +529,7 @@ Pass `""` for every model argument a mode does not use.
 
 #### Metrics Without a Judge
 
-`clip_score` and the metrics with dedicated weights take no judge, so the options below do not apply:
+`clip_score` and the metrics with dedicated weights take no judge, so the judge options below do not apply, except a [vLLM server](#option-3-vllm-server) for `unified_reward_2_score`:
 
 ```bash
 # Dedicated weights: no model argument
@@ -601,12 +600,24 @@ terravis-score --score_mode terravis_score --image_dir /path/to/images --save_pa
   --vqa_model_names google/gemma-4-31B-it
 ```
 
+For `unified_reward_2_score`, serve UnifiedReward-2.0 the same way:
+
+```bash
+# Shell 1
+bash scripts/serve_vllm_judge.sh CodeGoat24/UnifiedReward-2.0-qwen35-9b
+
+# Shell 2
+export TERRAVIS_REMOTE_VLLM_ENDPOINTS='{"CodeGoat24/UnifiedReward-2.0-qwen35-9b": "http://localhost:8000/v1"}'
+bash scripts/compute_t2i_scores.sh unified_reward_2_score /path/to/test_data.json /path/to/output "" "" ""
+```
+
 - **Needs:** the `vllm` extra where the server runs, `pip install -e ".[vllm]" --no-build-isolation`.
 - **Scoring:** needs no GPU and ignores `vllm_tp_size`.
 - **Judge name:** the server registers the judge under its HF repo id even when started with a short name; that id is the JSON key, and `vqa_model_names` (repo id or short name) must resolve to it, or the run stops with an error.
-- **Sticky:** the `export` holds for every later open-weight judge run in that shell; `unset TERRAVIS_REMOTE_VLLM_ENDPOINTS` to go back to option 1 or 2.
-- **Other servers:** any reachable URL works, on another host or started yourself. A server of your own must serve the judge under its HF repo id and needs the flags `serve_vllm_judge.sh` passes: `--max-model-len 8192` for `unigenbench_score`, and `--attention-backend TRITON_ATTN` for gemma-4, whose scores other attention kernels silently corrupt.
-- **Several judges:** one server per judge; list each in the JSON.
+- **`unified_reward_2_score`:** uses the server only if the JSON has its exact repo id; otherwise it loads with transformers.
+- **Sticky:** the `export` holds for every later run in that shell; `unset TERRAVIS_REMOTE_VLLM_ENDPOINTS` to go back to option 1 or 2.
+- **Other servers:** any reachable URL works, on another host or started yourself. A server of your own must serve the model under its HF repo id and needs the flags `serve_vllm_judge.sh` passes: `--max-model-len 8192` for the 4,096-token reply budget of `unigenbench_score` and `unified_reward_2_score`, and `--attention-backend TRITON_ATTN` for gemma-4, whose scores other attention kernels silently corrupt.
+- **Several models:** one server each, on its own GPUs and port (`CUDA_VISIBLE_DEVICES=2 bash scripts/serve_vllm_judge.sh <model> 1 8001`); list them all in the JSON.
 
 #### Option 4: API Judge
 
@@ -662,7 +673,7 @@ vllm_tp_size=2                                   # option 1: 0; option 2: GPUs f
 vllm_server_url=""                               # option 3: e.g. "http://localhost:8000/v1"
 ```
 
-- **Option 3:** first start the server in another shell, `bash scripts/serve_vllm_judge.sh google/gemma-4-31B-it 2`; set `vllm_server_url` to the URL it prints and keep `vqa_model_name` as the judge it serves. The script then sets `TERRAVIS_REMOTE_VLLM_ENDPOINTS` itself and ignores `vllm_tp_size`.
+- **Option 3:** first start the server in another shell, `bash scripts/serve_vllm_judge.sh google/gemma-4-31B-it 2`; set `vllm_server_url` to the URL it prints (with a UnifiedReward-2.0 server too, list both URLs, space-separated) and keep `vqa_model_name` as the judge it serves. The script then sets `TERRAVIS_REMOTE_VLLM_ENDPOINTS` itself and ignores `vllm_tp_size`.
 - **Option 4:** list only `terravis_score`; any other mode rejects an API judge and stops the sweep.
 - **Metrics without a judge:** mix in, as `pick_score` does here. Under option 3 a server on this machine holds 95% of its GPUs' memory, so give the two disjoint GPUs: `CUDA_VISIBLE_DEVICES=2,3` before `serve_vllm_judge.sh`, `CUDA_VISIBLE_DEVICES=0,1` before this script.
 
@@ -728,7 +739,7 @@ my_score = "my_pkg.my_score"
 ```
 
 - **After `pip install`:** `T2IScoreEvaluator` and `terravis-score` find the new `score_mode` (plugins load on the first registry lookup).
-- **Judge flag:** the CLI then needs `--vqa_model_names` or `--api_model_name`, unless the registration sets `judge_label`, the `judge=` label in result file names for a metric with its own weights.
+- **Judge flag:** the CLI then needs `--vqa_model_names`, unless the registration sets `judge_label`, the `judge=` label in result file names for a metric with its own weights.
 
 ## License
 

@@ -124,7 +124,7 @@ def write_metadata(img_save_path: str, gen_img_meta: list[dict], shard: str = ""
 
 
 def merge_shard_metadata(img_save_path: str) -> None:
-    parts = sorted(glob.glob(os.path.join(img_save_path, "test_data-shard*-of-*.json")))
+    parts = sorted(glob.glob(os.path.join(glob.escape(img_save_path), "test_data-shard*-of-*.json")))
     if not parts:
         raise FileNotFoundError(
             f"No shard metadata under {img_save_path}. Either the replicas never ran, "

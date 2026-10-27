@@ -7,10 +7,10 @@
 # The checkpoint-explanation dictionary, judge prompt template and prompt assembly
 # are eval/src/eval_common.py's English protocol, verbatim (including the
 # "Checkpoints Defination" spelling); the Chinese protocol is not ported.
-# Adaptations for one in-process chat VLM instead of Gemini / finetuned-Qwen servers:
+# Adaptations for one chat VLM instead of Gemini / finetuned-Qwen servers:
 #   * parse_evaluation_response returns None where the source prints a warning or
 #     crashes (non-list or wrong-length literal, literal_eval overflow).
-#   * No parse retry: the local judge decodes greedily, so a failed parse scores
+#   * No parse retry: the judge decodes greedily, so a failed parse scores
 #     'n/a' (scores/metrics/unigenbench_score.py).
 # ==============================================================================
 

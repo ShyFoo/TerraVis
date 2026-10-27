@@ -6,8 +6,8 @@ base URL (``{"google/gemma-4-31B-it": "http://host:8000/v1"}``); a server must s
 import json
 import math
 import os
-from concurrent.futures import ThreadPoolExecutor
 from functools import cached_property
+from multiprocessing.pool import ThreadPool
 from typing import Any
 
 import torch
@@ -84,9 +84,10 @@ class VLLMJudge:
         self._default = to_vllm_sampling_params(sampling_params)
 
     def _chat(self, texts: list[str], image: str | None, sampling: Any) -> list[Any]:
-        pil_image = None if image is None else load_image(image)
+        # One cached data URL per image, as RemoteVLLMJudge sends: a PNG re-encode per question was over half the run.
+        url = None if image is None else judge_pool.image_url(image)
         outputs = self.llm.chat(
-            [build_chat_messages(text, pil_image, self.model_name) for text in texts],
+            [build_chat_messages(text, url, self.model_name) for text in texts],
             sampling_params=sampling,
             chat_template_kwargs=_CHAT_TEMPLATE_KWARGS,
             use_tqdm=False,
@@ -126,10 +127,10 @@ class RemoteVLLMJudge:
         return self._chat(text, image, **{**self._chat_kwargs, **overrides})[0]
 
     def infer_many(self, texts: list[str], image: str) -> list[str]:
-        if not texts:  # ThreadPoolExecutor rejects max_workers=0
+        if not texts:  # ThreadPool(0) raises
             return []
-        with ThreadPoolExecutor(max_workers=len(texts)) as pool:
-            return list(pool.map(lambda text: self._chat(text, image, **self._chat_kwargs)[0], texts))
+        with ThreadPool(len(texts)) as pool:   # daemon threads: Ctrl-C exits past a hung request
+            return pool.map(lambda text: self._chat(text, image, **self._chat_kwargs)[0], texts)
 
     def first_token(self, question: str, image: str) -> tuple[str, list[tuple[str, float]]]:
         kwargs = {"max_tokens": 8, **self._chat_kwargs, "temperature": 0.0}
@@ -139,17 +140,25 @@ class RemoteVLLMJudge:
 ENDPOINTS_ENV = "TERRAVIS_REMOTE_VLLM_ENDPOINTS"
 
 
-def remote_target(model_name: str) -> dict[str, str] | None:
-    """``{"model_name", "base_url"}`` of the judge; ``None`` when the env var is unset."""
+def remote_endpoints() -> dict[str, str]:
+    """``TERRAVIS_REMOTE_VLLM_ENDPOINTS`` as ``{HF id: base URL}``; ``{}`` when the env var is unset."""
     raw = os.environ.get(ENDPOINTS_ENV, "")
     if not raw:
-        return None
+        return {}
     try:
         endpoints = json.loads(raw)
     except json.JSONDecodeError as e:
         raise RuntimeError(f"Failed to parse {ENDPOINTS_ENV} as JSON: {e}\nGot: {raw!r}") from e
     if not isinstance(endpoints, dict) or not endpoints:
         raise RuntimeError(f"{ENDPOINTS_ENV} must be a non-empty JSON object.")
+    return endpoints
+
+
+def remote_target(model_name: str) -> dict[str, str] | None:
+    """``{"model_name", "base_url"}`` of the judge; ``None`` when the env var is unset."""
+    endpoints = remote_endpoints()
+    if not endpoints:
+        return None
     if model_name not in endpoints:
         raise RuntimeError(
             f"No remote vLLM endpoint configured for model {model_name!r}. "

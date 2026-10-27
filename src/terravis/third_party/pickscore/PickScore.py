@@ -34,7 +34,7 @@ def load_model_and_processor(
         PICKSCORE_PROCESSOR_REPO_ID, cache_dir=pickscore_dir,
     )
     model = AutoModel.from_pretrained(
-        PICKSCORE_MODEL_REPO_ID, torch_dtype=dtype, cache_dir=pickscore_dir,
+        PICKSCORE_MODEL_REPO_ID, dtype=dtype, cache_dir=pickscore_dir,
         adapter_kwargs={"cache_dir": pickscore_dir},   # Auto*'s PEFT probe ignores cache_dir
     )
     model.to(device)

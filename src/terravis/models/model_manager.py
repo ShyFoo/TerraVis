@@ -17,16 +17,23 @@ def vllm_attention_backend(model_name: str) -> str | None:
     return override or ("TRITON_ATTN" if "gemma-4" in model_name.lower() else None)
 
 
+def vllm_prefix_caching(model_name: str) -> bool:
+    """On for judges, whose questions about one image share a prompt prefix; explicit, as vLLM leaves it off on
+    hybrid models such as Qwen3.8. Off for UnifiedReward-2.0: one request per image."""
+    return "unifiedreward" not in model_name.lower()
+
+
 def _compile_judge() -> bool:
     """TERRAVIS_COMPILE_JUDGE=1 (default off): pays back only on a long-running judge server; vLLM ignores it."""
     return os.environ.get("TERRAVIS_COMPILE_JUDGE", "").strip().lower() in {"1", "true", "yes", "on"}
 
 
 def load_vllm_llm(model_name: str, tensor_parallel_size: int, dtype: str, download_dir: str):
-    """max_model_len 8192 = unigenbench_score's 4096-token budget plus prompt."""
+    """max_model_len 8192 = unigenbench_score's 4096-token budget plus prompt. max_num_seqs 32: engine start fails
+    above a hybrid judge's Mamba cache blocks (Qwen3.5-9B on 24 GB: 91, vLLM's default 256)."""
     from vllm import LLM
 
-    extra = {}
+    extra = {"enable_prefix_caching": vllm_prefix_caching(model_name)}
     backend = vllm_attention_backend(model_name)
     if backend is not None:
         extra["attention_backend"] = backend
@@ -37,7 +44,7 @@ def load_vllm_llm(model_name: str, tensor_parallel_size: int, dtype: str, downlo
     return LLM(
         model=model_name, tensor_parallel_size=tensor_parallel_size, dtype=dtype,
         download_dir=download_dir, trust_remote_code=True,
-        max_model_len=8192, limit_mm_per_prompt={"image": 1}, **extra,
+        max_model_len=8192, max_num_seqs=32, limit_mm_per_prompt={"image": 1}, **extra,
     )
 
 
@@ -80,7 +87,7 @@ class ModelManager:
 
         print(f"Loading VQA model: {model_name}...")
         kwargs = {
-            "torch_dtype": self.dtype,
+            "dtype": self.dtype,
             "device_map": self.device,
             "cache_dir": self.hf_cache,
             "adapter_kwargs": {"cache_dir": self.hf_cache},   # Auto*'s PEFT probe ignores cache_dir
@@ -96,10 +103,7 @@ class ModelManager:
             model.forward = torch.compile(model.forward, mode="max-autotune")
         model.eval()
 
-        processor = AutoProcessor.from_pretrained(
-            model_name, cache_dir=self.hf_cache,
-            use_fast=True, trust_remote_code=True,
-        )
+        processor = AutoProcessor.from_pretrained(model_name, cache_dir=self.hf_cache, trust_remote_code=True)
 
         self._model_cache[model_name] = {"model": model, "processor": processor}
         return self._model_cache[model_name]

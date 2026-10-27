@@ -16,12 +16,14 @@
 #   flash_scheduler.py        the distilled ("dev") checkpoint's scheduler
 #   fm_solvers_unipc.py       FlowUniPCMultistepScheduler, the "full" default
 #
-# Four edits, each marked "TerraVis deviation" at its site:
+# Five edits, each marked "TerraVis deviation" at its site:
 #   pipeline.py               use_flash_attn follows what is installed instead of
 #                             a literal True.
 #   pipeline.py               resolution snapping (aspect ratio only; every square
 #                             request rendered 2048x2048) is behind snap_to_predefined,
 #                             default True; the loader passes False.
+#   pipeline.py               the flash scheduler's step noise comes from a private
+#                             generator seeded seed + 1, not a global reseed of every card.
 #   qwen3_vl_transformers.py  Qwen3VLTextRotaryEmbedding, two edits for transformers 5
 #                             (ROPE_INIT_FUNCTIONS lost "default", rope_theta moved into
 #                             config.rope_parameters, meta-device init); inv_freq

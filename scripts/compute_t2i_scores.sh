@@ -4,7 +4,8 @@
 # Env: MODEL_WEIGHT_ROOT  weights root (scripts/set_root_paths.sh)
 #      API_PROVIDER       openai | google, for an API judge with no models.yaml entry
 #      RESUME             1 = reuse an interrupted run's cached per-image scores
-#      TERRAVIS_REMOTE_VLLM_ENDPOINTS  judge on a vLLM server (scripts/serve_vllm_judge.sh); vllm_tp_size is ignored
+#      TERRAVIS_REMOTE_VLLM_ENDPOINTS  judge or UnifiedReward-2.0 (unified_reward_2_score) on a vLLM server
+#                                      (scripts/serve_vllm_judge.sh); vllm_tp_size is ignored
 #      OPENAI_API_KEY, GOOGLE_API_KEY or GEMINI_API_KEY  for an API judge
 
 source "$(dirname "${BASH_SOURCE[0]}")/set_root_paths.sh"

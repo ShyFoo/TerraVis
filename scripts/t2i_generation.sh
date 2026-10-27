@@ -57,8 +57,7 @@ run_replicas() {
   local seed=$1 log_dir idx devices gpu_ids rc=0
   local pids=()
   log_dir=$(mktemp -d)
-  # Slice the caller's CUDA_VISIBLE_DEVICES, if any, rather than claiming GPUs 0..n-1.
-  IFS=, read -ra gpu_ids <<< "${CUDA_VISIBLE_DEVICES:-$(seq -s, 0 $(( num_gpus - 1 )))}"
+  IFS=, read -ra gpu_ids <<< "$CUDA_VISIBLE_DEVICES"
   if (( ${#gpu_ids[@]} < replicas * gpus_per_replica )); then
     echo "ERROR: CUDA_VISIBLE_DEVICES lists ${#gpu_ids[@]} GPU(s); ${replicas} replica(s) x ${gpus_per_replica} need more." >&2
     return 1
