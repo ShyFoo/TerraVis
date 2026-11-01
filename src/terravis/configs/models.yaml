@@ -67,6 +67,10 @@ t2i:
     num_workers: 2
     height: 1024
     width: 1024
+    inference_kwargs:
+      num_inference_steps: 50
+      true_cfg_scale: 4.0
+      negative_prompt: "低分辨率，低画质，肢体畸形，手指畸形，画面过饱和，蜡像感，人脸无细节，过度光滑，画面具有AI感。构图混乱。文字模糊，扭曲。"
 
   # Two 9.3B transformers + an 8B Qwen3-VL text encoder, 26G fp8.
   # Gated repo (HF token); needs IDEOGRAM_API_KEY (magic-prompt rewrite, unseeded).
